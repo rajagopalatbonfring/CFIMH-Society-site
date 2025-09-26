@@ -62,9 +62,9 @@ function updateActiveNavLinkOnScroll() {
     let current = '';
     
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
+        const sectionbottom = section.offsetbottom;
         const sectionHeight = section.offsetHeight;
-        if (window.pageYOffset >= sectionTop - 100) {
+        if (window.pageYOffset >= sectionbottom - 100) {
             current = section.getAttribute('id');
         }
     });
@@ -165,7 +165,7 @@ function createAdvancedSearchModal() {
                 <div class="relative">
                     <input type="text" placeholder="Search research, forums, guidelines..." 
                            class="w-full p-4 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg">
-                    <button class="absolute right-4 top-4 text-gray-400 hover:text-blue-600">
+                    <button class="absolute right-4 bottom-4 text-gray-400 hover:text-blue-600">
                         <i class="fas fa-search text-xl"></i>
                     </button>
                 </div>
@@ -1101,7 +1101,7 @@ function toggleMobileMenu() {
         navLinks.classList.toggle('flex');
         navLinks.classList.toggle('flex-col');
         navLinks.classList.toggle('absolute');
-        navLinks.classList.toggle('top-20');
+        navLinks.classList.toggle('bottom-20');
         navLinks.classList.toggle('left-0');
         navLinks.classList.toggle('w-full');
         navLinks.classList.toggle('bg-white');
@@ -1226,7 +1226,7 @@ function createFormModal(title, content) {
 
 function showSuccessMessage(message) {
     const toast = document.createElement('div');
-    toast.className = 'fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-50 toast';
+    toast.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg z-50 toast';
     toast.innerHTML = `
         <div class="flex items-center">
             <i class="fas fa-check-circle mr-2"></i>
@@ -1254,7 +1254,7 @@ function showSuccessMessage(message) {
 
 function showErrorMessage(message) {
     const toast = document.createElement('div');
-    toast.className = 'fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50 toast';
+    toast.className = 'fixed bottom-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50 toast';
     toast.innerHTML = `
         <div class="flex items-center">
             <i class="fas fa-exclamation-circle mr-2"></i>
@@ -1394,7 +1394,7 @@ function showSchedulingForm() {
                 </select>
             </div>
             <div>
-                <label class="block text-sm font-medium mb-1">Topics of Interest</label>
+                <label class="block text-sm font-medium mb-1">bottomics of Interest</label>
                 <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" rows="3" placeholder="What aspects of CFIMH are you most interested in learning about?"></textarea>
             </div>
             <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">

@@ -385,7 +385,7 @@ h6 {
   margin: 0;
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
-  color: var(--color-text);
+  color: #262826;
   letter-spacing: var(--letter-spacing-tight);
 }
 
@@ -814,7 +814,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40z'/%3E%3Cpath d='m0 40l40-40h-40z'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("hexagonal_network.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .5;
 }
 
 
@@ -1171,7 +1174,7 @@ button:active {
 /* Navigation improvements */
 nav {
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 nav a {
