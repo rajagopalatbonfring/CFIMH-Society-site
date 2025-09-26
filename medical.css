@@ -359,7 +359,7 @@ html {
   font-family: var(--font-family-base);
   line-height: var(--line-height-normal);
   color: var(--color-text);
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
@@ -385,7 +385,7 @@ h6 {
   margin: 0;
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
-  color: #262826;
+  color: #ffffff;
   letter-spacing: var(--letter-spacing-tight);
 }
 
@@ -802,7 +802,7 @@ body {
 }
 
 .gradient-bg {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+      background: black;
       position: relative;
 }
 
@@ -817,7 +817,7 @@ body {
     background-image: url("hexagonal_network.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .5;
+    opacity: .8;
 }
 
 
@@ -829,6 +829,12 @@ body {
     filter: blur(10px);
     animation: float 6s ease-in-out infinite;
 }
+
+.overlay-hero{
+  opacity: .7;
+}
+
+
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -1173,7 +1179,7 @@ button:active {
 
 /* Navigation improvements */
 nav {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(14px);
     background: rgba(255, 255, 255, 0.9);
 }
 

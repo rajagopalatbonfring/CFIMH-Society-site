@@ -10,26 +10,27 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="bg-grey-500 shadow-sm fixed h-40 border rounded-full mx-14 px-6 top-4 left-0 right-0 z-50">
-        <div class="container">
+    <nav class="bg-grey-500 shadow-sm fixed h-32 border rounded-full mx-14 px-6 top-4 left-0 right-0 z-50 flex align-center justify-evenly">
+        <div class="container m-0 p-0">
             <div class="flex items-center justify-between h-full">
-                <div class="flex items-center space-x-8">
+                <div class="flex items-center justify-between ">
                     <div class="flex items-center">
-                        <div class="bg-blue-900 text-white px-3 py-1 rounded-md font-bold text-lg">
-                            <i class="fas fa-stethoscope mr-1"></i> CFIMH
+                        <div class="text-[#75adfc] px-3 py-3 rounded-full font-bold text-3xl flex align-center justify-center">
+                            <i class="fas fa-stethoscope"></i>
+                                CFIMH
                         </div>
                     </div>
-                    <div class="hidden md:flex space-x-6">
-                        <a href="#hero" class="text-gray-700 hover:text-blue-600 font-medium">HOME</a>
-                        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">ABOUT US <i class="fas fa-chevron-down text-xs ml-1"></i></a>
-                        <a href="#research" class="text-gray-700 hover:text-blue-600 font-medium">RESEARCH HUB <i class="fas fa-chevron-down text-xs ml-1"></i></a>
-                        <a href="#cme" class="text-gray-700 hover:text-blue-600 font-medium">PROFESSIONAL DEVELOPMENT <i class="fas fa-chevron-down text-xs ml-1"></i></a>
-                        <a href="#forums" class="text-gray-700 hover:text-blue-600 font-medium">FORUMS & DISCUSSION <i class="fas fa-chevron-down text-xs ml-1"></i></a>
-                        <a href="#resources" class="text-gray-700 hover:text-blue-600 font-medium">RESOURCES <i class="fas fa-chevron-down text-xs ml-1"></i></a>
-                        <a href="#events" class="text-gray-700 hover:text-blue-600 font-medium">EVENTS</a>
-                        <a href="#membership" class="text-gray-700 hover:text-blue-600 font-medium">MEMBERSHIP</a>
-                        <a href="#publications" class="text-gray-700 hover:text-blue-600 font-medium">PUBLICATIONS</a>
-                        <a href="#footer" class="text-gray-700 hover:text-blue-600 font-medium">CONTACT</a>
+                    <div class="hidden md:flex space-x-8 gap-y-4  align-center justify-center">
+                        <a href="#hero" class="text-gray-700 hover:text-blue-600 font-semibold">HOME</a>
+                        <a href="#about" class="text-gray-700 hover:text-blue-600 font-semibold">ABOUT US <i class="fas fa-chevron-down text-xs ml-1"></i></a>
+                        <a href="#research" class="text-gray-700 hover:text-blue-600 font-semibold">RESEARCH HUB <i class="fas fa-chevron-down text-xs ml-1"></i></a>
+                        <a href="#cme" class="text-gray-700 hover:text-blue-600 font-semibold">PROFESSIONAL DEVELOPMENT <i class="fas fa-chevron-down text-xs ml-1"></i></a>
+                        <a href="#forums" class="text-gray-700 hover:text-blue-600 font-semibold">FORUMS & DISCUSSION <i class="fas fa-chevron-down text-xs ml-1"></i></a>
+                        <a href="#resources" class="text-gray-700 hover:text-blue-600 font-semibold">RESOURCES <i class="fas fa-chevron-down text-xs ml-1"></i></a>
+                        <a href="#events" class="text-gray-700 hover:text-blue-600 font-semibold">EVENTS</a>
+                        <a href="#membership" class="text-gray-700 hover:text-blue-600 font-semibold">MEMBERSHIP</a>
+                        <a href="#publications" class="text-gray-700 hover:text-blue-600 font-semibold">PUBLICATIONS</a>
+                        <a href="#footer" class="text-gray-700 hover:text-blue-600 font-semibold">CONTACT</a>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -45,14 +46,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hex-pattern gradient-bg h-[50vh] md:h-[60vh] lg:h-[90vh] relative overflow-hidden mt-24 mx-4 border rounded-xl overflow-hidden">
+    <section id="hero" class="hex-pattern gradient-bg h-[50vh] md:h-[60vh] lg:h-[90vh] relative overflow-hidden mt-20 mx-4 border rounded-xl overflow-hidden flex align-center justify-center">
 
-        <div class="absolute top-0 left-0 right-0 bottom-0 z-1 bg-sky-500/20 backdrop-blur-md  rounded-xl "></div>
+        <div class="gradient-bg top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
+        <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-1">
+            <video autoplay muted loop playsinline class="bg-video">
+                <source src="bgVideo.mp4" type="video/mp4">
+            </video>
+        </div>
         <!-- <div class="blob-shape w-96 h-96 bottom-0 "></div>
         <div class="blob-shape w-72 h-72 top-40 right-10 "></div> -->
         
-        <div class="container relative mx-auto px-4 py-20 z-10">
-            <div class="flex flex-col lg:flex-row items-center">
+        <div class="container relative mx-auto px-4 py-20 z-10 flex items-center ">
+            <div class="flex flex-col lg:flex-row items-center justify-evenly w-full ">
                 <div class="lg:w-1/2 text-white mb-10 lg:mb-0">
                     <p class="text-blue-100 mb-4">Advancing Medical Excellence Through Evidence-Based Collaboration</p>
                     <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -72,11 +78,11 @@
                         </button>
                     </div>
                 </div>
-                <div class="lg:w-1/2 relative">
-                    <img src="heroimg.jpeg" 
+                <div class="lg:w-1/2 absolute ">
+                    <!-- <img src="heroine.png" 
                          alt="Medical Research Team" 
-                         class="rounded-lg w-full max-w-md mx-auto"
-                         style="object-fit: cover;">
+                         class="rounded-lg w-full  mx-auto -mb-96"
+                         style="object-fit: cover;"> -->
                     <div class="absolute -bottom-10 -right-10 bg-white rounded-2xl p-6 shadow-xl">
                         <div class="text-center">
                             <i class="fas fa-phone-alt text-blue-600 text-2xl mb-2"></i>
