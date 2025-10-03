@@ -7,13 +7,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+        body{
+            font-family: "Sora", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+
         .gradient-bg {
-            background: black;
             position: relative;
         }
 
+        .greenclr {
+            color: #6BF771;
+            border: #6BF771;
+            background-color: #6BF771;
+        }
+
         .overlay-hero{
-            opacity: .7;
+            opacity: .6;
         }
 
         .gradient-bg::before {
@@ -41,7 +56,7 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
         .bendo-gradient {
-            background: linear-gradient(135deg, #3b82f6, #a855f7);
+            background: linear-gradient(135deg, #1567e6, #a855f7);
         }
         .bendo-button {
             border-radius: 9999px;
@@ -78,20 +93,20 @@
         }
     </style>
 </head>
-<body class="bg-black/5">
+<body class="bg-gradient-to-b from-gray-50 to-white">
     <!-- Navigation -->
 
-    <nav class="bg-white shadow-xl fixed h-24 border rounded-full mx-14 px-6 top-12 left-0 right-0 z-50 flex align-center justify-evenly">
+    <nav class="bg-white/80 shadow-xl fixed h-24 border rounded-full mx-14 px-6 top-12 left-0 right-0 z-50 flex align-center justify-evenly">
         <div class="container m-0 p-0">
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center justify-between ">
                     <div class="flex items-center">
-                        <div class="text-[#75adfc] px-3 py-3 rounded-full font-bold text-3xl flex align-center justify-center">
+                        <div class="text-[#75adfc] px-3 py-3 rounded-full font-semibold text-3xl flex align-center justify-center">
                             <i class="fas fa-stethoscope"></i>
                             CFIMH
                         </div>
                     </div>
-                    <div class="hidden md:flex space-x-8 gap-y-4  align-center justify-center">
+                    <div class="hidden md:flex space-x-8 gap-y-4 align-center justify-center  text-sm">
                         <a href="#hero" class="text-gray-700 hover:text-blue-600 font-semibold">HOME</a>
                         <a href="#about" class="text-gray-700 hover:text-blue-600 font-semibold">ABOUT US</a>
                         <a href="#research" class="text-gray-700 hover:text-blue-600 font-semibold">RESEARCH HUB</a>
@@ -113,7 +128,7 @@
         </div>
     </nav>
 
-    <div class="h-24 border-1 border-grey-100 rounded-b-xl mx-4 px-6 top-0 left-0 right-0 z-50 flex align-center justify-evenly">
+    <div class=" fixed h-24 border-1 border-grey-100 rounded-b-xl mx-4 px-6 top-0 left-0 right-0 z-50 flex align-center justify-evenly">
         <div class="container m-0 p-0  mx-14">
             <div class="flex pt-3 items-start justify-between h-full">
                 <div>
@@ -136,8 +151,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="hero" class="hex-pattern gradient-bg h-[50vh] md:h-[60vh] lg:h-[90vh] relative overflow-hidden mt-0 mx-4 border rounded-xl overflow-hidden flex align-center justify-center">
-
+    <section id="hero" class="gradient-bg h-[60vh] md:h-[70vh] lg:h-[95vh] relative overflow-hidden overflow-hidden flex align-center justify-center">
         <div class="gradient-bg top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
         <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-1">
             <video autoplay muted loop playsinline class="bg-video">
@@ -147,17 +161,17 @@
         
         <div class="relative w-full py-20 z-10 flex items-center justify-center ">
             <div class=" text-white mb-10 lg:mb-0">
-                <p class="text-blue-100 mb-4 text-center">Advancing Medical Excellence Through Evidence-Based Collaboration</p>
+                <h1 class="text-[#6BF771]/90 mb-4 text-center font-[300] ">Advancing Medical Excellence Through Evidence-Based Collaboration</h1>
                 <h1 class="text-6xl lg:text-8xl font-bold mb-6 leading-tight text-center text-white">
                     Shaping the Future of<br/>Healthcare Through<br/>Intellectual Rigor
                 </h1>
-                <p class="text-blue-100 mb-8 text-lg leading-relaxed text-center">
+                <p class="text-blue-100 mb-8 text-lg  font-[200] leading-relaxed text-center">
                     Join 25,000+ leading medical professionals, researchers, and healthcare<br/>
                     innovators dedicated to advancing patient care through evidence-based<br/>
                     practice and ethical excellence.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center align-center">
-                    <button class="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">
+                    <button class="bg-[#6BF771]/60 backdrop-blur text-white px-8 py-4 rounded-full border border-white/40 font-semibold transition">
                         Explore Clinical Research <i class="fas fa-arrow-right ml-2"></i>
                     </button>
                     <button class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
@@ -169,8 +183,8 @@
     </section>
 
     <!-- Metrics (Bendo UI Design) -->
-    <section class="py-12 relative z-30 mx-4 md:mx-20 -mt-24">
-        <div class="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-2xl px-10 py-10">
+    <section class="relative z-30 mx-4 md:mx-48 -mt-24 font-[300]">
+        <div class="bg-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-2xl px-32 py-10">
             <div class="bendo-card p-6 text-center fade-in">
                 <i class="fas fa-user-md text-blue-600 text-3xl mb-3"></i>
                 <div class="text-3xl font-bold text-blue-900">25,000+</div>
@@ -195,141 +209,89 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="container mx-auto px-4">
-            <div class="bendo-card p-8 md:p-12 text-center fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 bendo-gradient text-transparent bg-clip-text">The Premier Global Community for Medical Intellectuals</h2>
-                <p class="text-gray-600 mb-8 max-w-3xl mx-auto text-base md:text-lg">Established in 1978, CFIMH serves as the definitive platform for medical professionals committed to scholarly excellence, ethical practice, and evidence-based healthcare. Our community spans 65 countries and includes Nobel laureates, department chairs, and emerging clinical leaders.</p>
-                <button class="bendo-button bg-blue-600 text-white bendo-gradient hover:bg-blue-700">Learn More</button>
+    <section id="about" class="py-8 relative">
+        <div class="container bendo-card mx-auto flex flex-col md:flex-row items-center justify-center">
+            <div class="p-8 md:p-12 text-left max-w-2xl fade-in">
+                <p class="text-[#6BF771] font-semibold text-xl mb-1">About</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Pioneering the Future of Global Health</h2>
+                <p class="font-[200] text-gray-600 mb-8 text-base md:text-lg">Founded on the principles of collaboration and innovation, the Global Health Nexus has been at the forefront of medical advancement for over two decades. We connect professionals from 120+ countries, fostering a diverse community dedicated to improving patient outcomes worldwide.</p>
+                <p class="text-gray-600 font-[200]  mb-8 text-base md:text-lg">Our mission is to accelerate research, standardize best practices, and provide unparalleled resources for healthcare providers at every stage of their careers.</p>
+                <button class="bg-white text-[#1567e6] px-8 py-4 rounded-full border-2 font-semibold hover:bg-gray-100 transition">Learn More About Our Mission</button>
+            </div>
+            <div class="p-4 md:p-6 mt-8 md:mt-0 md:ml-8 w-72 h-72 md:w-full md:h-full flex items-center justify-center">
+                <img src="doctor.jpg" class="w-full h-full object-cover rounded-lg" alt="Healthcare Professional">
             </div>
         </div>
-        <div class="w-96 h-96 bg-blue-100">
-            <img src="doctor.jpg" class="no-repeat bg-cover" alt="">
-        </div>
-        
-    </section>
-
-    <!-- Emergency Guidelines -->
-    <section id="emergency" class="py-16 bg-gradient-to-r from-red-50 to-red-100">
-        <div class="container mx-auto px-4">
-            <div class="bendo-card p-8 md:p-12 flex flex-col md:flex-row items-center justify-between fade-in">
+        <div class="absolute mx-auto bottom-20 right-60">
+            <div class="bg-red-700/30 backdrop-blur-2xl rounded-2xl md:p-4 flex flex-col items-center justify-between fade-in">
+                <p class="text-gray-900 font-[300] text-base md:text-xs">24/7 Access to Critical Care Protocols</p>
                 <div class="mb-6 md:mb-0">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-2 text-red-600"><i class="fas fa-exclamation-triangle mr-2"></i>Emergency Clinical Guidelines</h3>
-                    <p class="text-red-700 text-base md:text-lg">24/7 Access to Critical Care Protocols</p>
+                    <h3 class="text-2xl font-bold mb-2 text-white"><i class="text-red-600 fas fa-exclamation-triangle mr-2"></i>Emergency Clinical Guidelines</h3>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="bendo-button bg-white text-red-600 hover:bg-gray-100"><i class="fas fa-heart-pulse mr-2"></i>Cardiac Protocols</button>
-                    <button class="bendo-button bg-red-600 text-white hover:bg-red-700 border border-red-400"><i class="fas fa-phone mr-2"></i>Emergency Consultation</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Tools & Widgets -->
-    <section id="tools" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bendo-gradient text-transparent bg-clip-text">Quick Professional Tools</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bendo-card p-6 text-center fade-in">
-                    <i class="fas fa-certificate text-blue-600 text-3xl mb-4"></i>
-                    <h4 class="font-bold text-lg mb-2">CME Tracker</h4>
-                    <p class="text-gray-600 text-sm mb-4">Track your continuing education credits</p>
-                    <button class="bendo-button text-blue-600 hover:text-blue-800">Launch Tool →</button>
-                </div>
-                <div class="bendo-card p-6 text-center fade-in">
-                    <i class="fas fa-search-plus text-green-600 text-3xl mb-4"></i>
-                    <h4 class="font-bold text-lg mb-2">Guidelines Search</h4>
-                    <p class="text-gray-600 text-sm mb-4">Find clinical practice guidelines</p>
-                    <button class="bendo-button text-blue-600 hover:text-blue-800">Search Now →</button>
-                </div>
-                <div class="bendo-card p-6 text-center fade-in">
-                    <i class="fas fa-calendar-check text-purple-600 text-3xl mb-4"></i>
-                    <h4 class="font-bold text-lg mb-2">Event Calendar</h4>
-                    <p class="text-gray-600 text-sm mb-4">View upcoming medical events</p>
-                    <button class="bendo-button text-blue-600 hover:text-blue-800">View Calendar →</button>
-                </div>
-                <div class="bendo-card p-6 text-center fade-in">
-                    <i class="fas fa-sign-in-alt text-orange-600 text-3xl mb-4"></i>
-                    <h4 class="font-bold text-lg mb-2">Member Portal</h4>
-                    <p class="text-gray-600 text-sm mb-4">Access member-only content</p>
-                    <button class="bendo-button text-blue-600 hover:text-blue-800">Login →</button>
+                    <button class="bg-white p-1 rounded-full w-8 h-8 text-red-600 hover:bg-gray-100"><i class="fas fa-heart-pulse"></i></button>
+                    <button class="bg-[#6BF771]/60 p-1 rounded-full w-8 h-8 text-white hover:bg-red-700"><i class="fas fa-phone"></i></button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Research -->
-    <section id="research" class="py-20 bg-white">
+    <section id="research" class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <p class="text-blue-600 font-semibold mb-2">Research Excellence</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 bendo-gradient text-transparent bg-clip-text">Latest Breakthrough Clinical Research</h2>
-                <div class="flex justify-center items-center gap-2 mb-8">
-                    <button class="w-2 h-2 bg-gray-300 rounded-full"></button>
-                    <button class="w-8 h-2 bg-blue-600 rounded-full"></button>
-                    <button class="w-2 h-2 bg-gray-300 rounded-full"></button>
-                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Research Hub</h2>
+                <p class="text-gray-600 font-[300] mb-8 max-w-2xl mx-auto text-base md:text-lg">Discover pioneering studies and find opportunities to contribute to groundbreaking research.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bendo-card p-8 fade-in">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
-                            <i class="fas fa-dna text-blue-600 text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm text-gray-500">CFIMH Clinical Research Quarterly</p>
-                            <p class="text-sm font-bold text-green-600">Impact Factor: 12.7</p>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Novel Biomarkers in Early-Stage Oncological Detection</h3>
-                    <p class="text-gray-600 mb-4">Dr. Elena Vasquez, MD, PhD et al.</p>
-                    <p class="text-gray-500 mb-4 text-sm">This multicenter study identifies three novel biomarkers that demonstrate 94% accuracy in detecting...</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">August 2025</span>
-                        <a href="#" class="bendo-button text-blue-600 hover:text-blue-800">Full Text Available to Members →</a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="bendo-card p-6 fade-in">
+                    <img src="first.jpg" alt="CRISPR-Cas9 Research" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">CRISPR-Cas9 in Treating Genetic Heart Conditions</h3>
+                    <p class="text-gray-600 font-[300] mb-2">Journal of Molecular Cardiology</p>
+                    <div class="flex align-center justify-between">
+                        <p class="bg-[#6BF771] font-[300] text-sm text-gray-900 px-1 rounded">Impact: 15.2</p>
+                        <p class="text-sm text-gray-900">May 2024</p>
                     </div>
                 </div>
-                <div class="bendo-card p-8 fade-in">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 p-3 rounded-lg mr-4">
-                            <i class="fas fa-brain text-green-600 text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm text-gray-500">Emergency Medical Intelligence</p>
-                            <p class="text-sm font-bold text-green-600">Open Access</p>
-                        </div>
+                <div class="bendo-card p-6 fade-in">
+                    <img src="seond.jpg" alt="AI Predictive Models" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">AI-Powered Predictive Models for Sepsis Onset</h3>
+                    <p class="text-gray-600 mb-2 font-[300] ">The Lancet Digital Health</p>
+                    <div class="flex align-center justify-between">
+                        <p class="bg-[#6BF771] font-[300] text-sm text-gray-900 px-1 rounded">Impact: 30.1</p>
+                        <p class="font-[200] text-sm text-gray-900">June 2024</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">AI-Assisted Diagnostic Protocols in Emergency Medicine</h3>
-                    <p class="text-gray-600 mb-4">Prof. James Mitchell, MD, FACS et al.</p>
-                    <p class="text-gray-500 mb-4 text-sm">Implementation of machine learning algorithms in emergency departments resulted in...</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">September 2025</span>
-                        <a href="#" class="bendo-button text-blue-600 hover:text-blue-800">Open Access Publication →</a>
+                </div>
+                <div class="bendo-card p-6 fade-in">
+                    <img src="last.jpg" alt="Neuroprotective Effects" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Neuroprotective Effects of a Novel Compound in Alzheimer's</h3>
+                    <p class="text-gray-600 mb-2 font-[300]">Neuron</p>
+                    <div class="flex align-center justify-between">
+                        <p class="bg-[#6BF771] font-[300] text-sm text-gray-900 px-1 rounded">Impact: 18.6</p>
+                        <p class="font-[200] text-sm text-gray-900">April 2024</p>
                     </div>
                 </div>
             </div>
-            <div class="mt-16">
-                <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center bendo-gradient text-transparent bg-clip-text">Active Research Opportunities</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bendo-card p-6 fade-in">
-                        <h4 class="font-bold text-lg mb-2">Global COVID-19 Long-term Effects Study</h4>
-                        <p class="text-gray-600 mb-3 text-sm">Phase III - Seeking 15 institutions</p>
-                        <p class="text-sm text-gray-500 mb-4">$2.5M funding available</p>
-                        <button class="bendo-button text-blue-600 hover:text-blue-800">Learn More →</button>
-                    </div>
-                    <div class="bendo-card p-6 fade-in">
-                        <h4 class="font-bold text-lg mb-2">Pediatric Rare Disease Registry</h4>
-                        <p class="text-gray-600 mb-3 text-sm">Recruitment phase - 25 sites needed</p>
-                        <p class="text-sm text-gray-500 mb-4">$1.8M funding available</p>
-                        <button class="bendo-button text-blue-600 hover:text-blue-800">Apply Now →</button>
-                    </div>
-                    <div class="bendo-card p-6 fade-in">
-                        <h4 class="font-bold text-lg mb-2">AI in Radiology Validation Study</h4>
-                        <p class="text-gray-600 mb-3 text-sm">Phase III enrollment - 8 sites needed</p>
-                        <p class="text-sm text-gray-500 mb-4">$3.2M funding available</p>
-                        <button class="bendo-button text-blue-600 hover:text-blue-800">Join Study →</button>
-                    </div>
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Active Research Opportunities</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-20">
+                <div class="bendo-card p-6 text-center fade-in">
+                    <h4 class="text-xl font-bold mb-2">Phase III Trial for a Novel Diabetes Drug</h4>
+                    <p class="font-[200] text-purple-600 text-lg mb-2">$5M in funding</p>
+                    <p class="font-[200] text-gray-500 mb-4">500 needed</p>
+                    <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>
                 </div>
+                <div class="bendo-card p-6 text-center fade-in">
+                    <h4 class="text-xl font-bold mb-2">Longitudinal Study on Post-Viral Fatigue</h4>
+                    <p class="font-[200] text-purple-600 text-lg mb-2">$1.2M in funding</h2>
+                    <p class="font-[200] text-gray-500 mb-4">2,000 needed</p>
+                    <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>                </div>
+                <div class="bendo-card p-6 text-center fade-in">
+                    <h4 class="text-xl font-bold mb-2">Genomic Sequencing of Rare Cancers</h4>
+                    <p class="font-[200] text-purple-600 text-lg mb-2">$2.5M in funding</p>
+                    <p class="font-[200] text-gray-500 mb-4">100 needed</p>
+                    <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>                </div>
             </div>
         </div>
     </section>
