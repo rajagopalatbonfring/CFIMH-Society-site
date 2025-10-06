@@ -24,7 +24,7 @@
         }
 
         .overlay-hero{
-            opacity: .6;
+            opacity: .7;
         }
 
 
@@ -35,8 +35,8 @@
             transform: translate(-50%, -50%);
             min-width: 100%;
             min-height: 100%;
-            object-fit: cover; /* This is the key property for covering the container */
-            z-index: -1; /* Pushes the video behind other content */
+            object-fit: cover;
+            z-index: -1; 
         }
 
         .bg-img-overlay{
@@ -48,7 +48,7 @@
 
 
         .bg-img-overlay2{
-            background-image: url("element1.jpg");
+            background-image: url("element3.png");
             background-position: bottom;
             background-size: cover;
             background-repeat: no-repeat;
@@ -68,14 +68,28 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("hexagonal_network.jpg");
-            background-position: center;
+            background-image: url("hero3.png"); /*hexagonal_network.jpg*/
+            background-position: top;
             background-repeat: no-repeat;
-            opacity: .8;
+            background-size: cover;
+            opacity: 1;
         }
+
+        .Section-heading::after {
+            content: ''; 
+            display: block;
+            width: 100px; 
+            padding-top: 8px;
+            height: 3px; 
+            background: #6BF771; 
+            border-radius: 4px;
+            margin: 0 auto; 
+        }
+
+
         /* Custom Bendo UI-inspired styles */
         .bendo-card {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgb(255, 255, 255);
             backdrop-filter: blur(10px);
             border-radius: 1.5rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -123,10 +137,11 @@
         }
     </style>
 </head>
-<body class="">
+<body>
+
     <!-- Navigation -->
 
-    <nav class="bg-white/95 shadow-xl fixed h-20 border-2 rounded-full mx-36 px-6 top-4 left-0 right-0 z-50 flex align-center justify-evenly">
+    <nav class="bg-white shadow-xl fixed h-20 border-2 rounded-full mx-36 px-6 top-4 left-0 right-0 z-50 flex align-center justify-evenly">
         <div class="container m-0 p-0">
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center justify-between ">
@@ -184,6 +199,7 @@
     <!-- Hero Section -->
     <section id="hero" class="gradient-bg h-[60vh] md:h-[70vh] lg:h-[95vh] relative overflow-hidden flex align-center justify-center">
         <div class="gradient-bg top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
+        <div class="absolute inset-0 bg-[#214582]/20 backdrop-blur-xs z-10"></div>
         <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-1">
             <video autoplay muted loop playsinline class="bg-video object-cover">
                 <source src="bgVideo.mp4" type="video/mp4">
@@ -192,7 +208,7 @@
         
         <div class="relative w-full py-20 z-10 flex items-center justify-center ">
             <div class=" text-white mb-10 lg:mb-0">
-                <h1 class="text-[#6BF771]/90 mb-4 text-center font-[300] ">Advancing Medical Excellence Through Evidence-Based Collaboration</h1>
+                <h1 class="text-[#6BF771] mb-4 text-center font-[300] ">Advancing Medical Excellence Through Evidence-Based Collaboration</h1>
                 <h1 class="text-6xl lg:text-8xl font-bold mb-6 leading-tight text-center text-white">
                     Shaping the Future of<br/>Healthcare Through<br/>Intellectual Rigor
                 </h1>
@@ -202,7 +218,7 @@
                     practice and ethical excellence.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center align-center">
-                    <button class="bg-[#6BF771]/60 backdrop-blur text-white px-8 py-4 rounded-full border border-white/40 font-semibold transition">
+                    <button class="bg-[#6BF771]/70 backdrop-blur text-white px-8 py-4 rounded-full border border-white/40 font-semibold transition">
                         Explore Clinical Research <i class="fas fa-arrow-right ml-2"></i>
                     </button>
                     <button class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
@@ -214,39 +230,43 @@
     </section>
 
 
-    <!-- Metrics (Bendo UI Design) -->
-    <section class="relative z-30 mx-4 md:mx-48 -mt-24 font-[300]">
-        <div class="bg-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-2xl px-32 py-10">
-            <div class="bendo-card p-6 text-center fade-in">
-                <i class="fas fa-user-md text-blue-600 text-3xl mb-3"></i>
-                <div class="text-3xl font-bold text-blue-900">25,000+</div>
-                <p class="text-gray-600 mt-2 text-sm">Medical Professionals Worldwide</p>
-            </div>
-            <div class="bendo-card p-6 text-center fade-in">
-                <i class="fas fa-file-medical text-green-600 text-3xl mb-3"></i>
-                <div class="text-3xl font-bold text-green-900">1,250</div>
-                <p class="text-gray-600 mt-2 text-sm">Peer-Reviewed Publications Annually</p>
-            </div>
-            <div class="bendo-card p-6 text-center fade-in">
-                <i class="fas fa-graduation-cap text-purple-600 text-3xl mb-3"></i>
-                <div class="text-3xl font-bold text-purple-900">50,000</div>
-                <p class="text-gray-600 mt-2 text-sm">CME Hours Provided</p>
-            </div>
-            <div class="bendo-card p-6 text-center fade-in">
-                <i class="fas fa-clipboard-list text-orange-600 text-3xl mb-3"></i>
-                <div class="text-3xl font-bold text-orange-900">180</div>
-                <p class="text-gray-600 mt-2 text-sm">Clinical Practice Guidelines Developed</p>
-            </div>
-        </div>
-    </section>
+<!-- bg-img-overlay  -->
+<div class=" bg-img-overlay2 relative">
+        <!-- <div class="absolute inset-0  bg-gradient-to-b from-white to-white/0"></div> -->
+        <!-- <div class="absolute inset-0  bg-gradient-to-b from-white/0  to-white"></div> -->
 
+            <!-- Metrics (Bendo UI Design) -->
+        <section class="absolute -top-32 z-30 mx-4 md:mx-48 font-[300]">
+            <div class="bg-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-2xl px-32 py-10">
+                <div class="bendo-card p-6 text-center fade-in">
+                    <i class="fas fa-user-md text-blue-600 text-3xl mb-3"></i>
+                    <div class="text-3xl font-bold text-blue-900">25,000+</div>
+                    <p class="text-gray-600 mt-2 text-sm">Medical Professionals Worldwide</p>
+                </div>
+                <div class="bendo-card p-6 text-center fade-in">
+                    <i class="fas fa-file-medical text-green-600 text-3xl mb-3"></i>
+                    <div class="text-3xl font-bold text-green-900">1,250</div>
+                    <p class="text-gray-600 mt-2 text-sm">Peer-Reviewed Publications Annually</p>
+                </div>
+                <div class="bendo-card p-6 text-center fade-in">
+                    <i class="fas fa-graduation-cap text-purple-600 text-3xl mb-3"></i>
+                    <div class="text-3xl font-bold text-purple-900">50,000</div>
+                    <p class="text-gray-600 mt-2 text-sm">CME Hours Provided</p>
+                </div>
+                <div class="bendo-card p-6 text-center fade-in">
+                    <i class="fas fa-clipboard-list text-orange-600 text-3xl mb-3"></i>
+                    <div class="text-3xl font-bold text-orange-900">180</div>
+                    <p class="text-gray-600 mt-2 text-sm">Clinical Practice Guidelines Developed</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="bg-img-overlay relative">
-        <div class="absolute inset-0  bg-gradient-to-b from-white to-white/0"></div>
-        <div class="absolute inset-0  bg-gradient-to-b from-white/0  to-white"></div>
+        <!-- <div class="absolute inset-0 z-10 bg-[#3f7f8e]/10"></div> -->
+        <div class="absolute inset-0 z-20 bg-black/20 backdrop-blur"></div>
+        <div class="absolute inset-0 z-10 bg-blue-900/10 backdrop-blur"></div>
 
         <!-- About Section -->
-        <section id="about" class="py-8 relative">
+        <section id="about" class="py-8 pt-32 relative bg-gradient-to-b from-[black]/50 to-black/0 z-20">
             <div class="container bg-white bendo-card mx-auto flex flex-col md:flex-row items-center justify-center">
                 <div class="p-8 md:p-12 text-left max-w-2xl fade-in">
                     <p class="text-[#6BF771] font-semibold text-xl mb-1">About</p>
@@ -267,18 +287,18 @@
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <button class="bg-white p-1 rounded-full w-8 h-8 text-red-600 hover:bg-gray-100"><i class="fas fa-heart-pulse"></i></button>
-                        <button class="bg-[#6BF771]/60 p-1 rounded-full w-8 h-8 text-white hover:bg-red-700"><i class="fas fa-phone"></i></button>
+                        <button class="bg-[#6BF771]/70 p-1 rounded-full w-8 h-8 text-white hover:bg-red-700"><i class="fas fa-phone"></i></button>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Research -->
-        <section id="research" class="py-20">
+        <section id="research" class="relative py-20 z-20">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12 relative z-10">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Research Hub</h2>
-                    <p class="text-gray-600 font-[300] mb-8 max-w-2xl mx-auto text-base md:text-lg">Discover pioneering studies and find opportunities to contribute to groundbreaking research.</p>
+                    <h2 class="Section-heading text-4xl md:text-5xl font-bold mb-4 text-white">Research Hub</h2>
+                    <p class="text-white/90 font-[300] mb-8 max-w-2xl mx-auto text-base md:text-lg">Discover pioneering studies and find opportunities to contribute to groundbreaking research.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                     <div class="bendo-card p-6 fade-in">
@@ -310,7 +330,7 @@
                     </div>
                 </div>
                 <div class="text-center mb-12  relative z-10">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900 ">Active Research Opportunities</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">Active Research Opportunities</h3>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-20">
                     <div class="bendo-card p-6 text-center fade-in">
@@ -332,20 +352,20 @@
                 </div>
             </div>
         </section>
-    </div>
 
 
-    <!-- Clinical Guidelines --> 
-    <section id="guidelines" class="relative py-20 bg-gradient-to-b from-white/0 to-gray-200">
+
+    <!-- Clinical Guidelines   bg-gradient-to-b from-white/0 to-gray-200 -->
+    <section id="guidelines" class="relative py-20 z-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 ">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Clinical Guidelines Database</h2>
-                <p class="text-gray-600 max-w-2xl font-[200] mx-auto text-base md:text-lg">Access the latest evidence-based clinical guidelines and practice recommendations.</p>
+                <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Clinical Guidelines Database</h2>
+                <p class="text-white/90 max-w-2xl font-[200] mx-auto text-base md:text-lg">Access the latest evidence-based clinical guidelines and practice recommendations.</p>
             </div>
             <div class="flex flex-col lg:flex-row gap-8">
                 <div class="lg:w-2/3">
-                    <h3 class="text-2xl font-bold mb-6">Recent Updates</h3>
-                    <div class="space-y-4">
+                    <h3 class="text-2xl font-bold mb-6 text-white/95">Recent Updates</h3>
+                    <div class="space-y-4"> 
                         <div class="bendo-card p-4 flex items-center justify-between">
                             <div class="flex items-center">
                                 <span class="text-red-500 mr-3">❤️</span>
@@ -404,13 +424,13 @@
         </div>
     </section>
 
-    <div class="bg-img-overlay2 relative">
+    <div class="relative">
 
         <!-- <div class="absolute inset-0  bg-gradient-to-b from-white to-white/0"></div> -->
-        <div class="absolute inset-0  bg-gradient-to-b from-white/0 to-white"></div>
+        <!-- <div class="absolute inset-0  bg-gradient-to-b from-white/0 to-white"></div> -->
 
-        <!-- Publications & Journal -->
-        <section id="publications" class="py-20 relative z-10 bg-gradient-to-b from-gray-200 to-white/0">
+        <!-- Publications & Journal bg-gradient-to-b from-gray-200 to-white/0-->
+        <section id="publications" class="py-20 relative z-20 ">
             <div class="container flex align-center justify-center mx-auto px-4 flex flex-col lg:flex-row gap-8">
                 <div class="lg:w-1/2">
                     <div class="bendo-card p-6 text-left fade-in">
@@ -459,11 +479,11 @@
         </section>
 
         <!-- Events & Conferences -->
-        <section id="events" class="py-20 relative z-10">
+        <section id="events" class="py-20 relative z-20">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Events & Conferences</h2>
-                    <p class="text-gray-600 text-base md:text-lg font-[200]">Join thousands of professionals at our premier events.</p>
+                    <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Events & Conferences</h2>
+                    <p class="text-white/90 text-base md:text-lg font-[200]">Join thousands of professionals at our premier events.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mx-32">
                     <div class="relative bendo-card text-center fade-in">
@@ -500,16 +520,18 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button class="bendo-button bg-[#1567e6] text-white hover:bg-blue-700">View Full Calendar</button>
+                    <button class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
+                        View Full Calendar
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- CME Programs & Forum -->
-        <section id="cme" class="py-20 relative z-10">
-            <div class="container mx-auto px-4 flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">CME Programs</h2>
+        <section id="cme" class="py-20 relative z-20">
+            <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-6 text-white text-center">CME Programs</h2>
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row gap-12 mt-20">
+                <div class="lg:w-1/2 ">
                     <div class="space-y-4">
                         <div class="bendo-card p-4 text-left fade-in">
                             <h3 class="text-lg font-bold mb-2">Advanced Cardiac Life Support (ACLS)</h3>
@@ -529,7 +551,7 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Active Forum Discussions</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Active Forum Discussions</h2>
                     <div class="space-y-4 bendo-card">
                         <div class="p-4 text-left fade-in">
                             <h3 class="text-lg font-bold mb-2">Challenging Case: Atypical Presentation of Myocarditis</h3>
@@ -554,11 +576,11 @@
         </section>
 
         <!-- News & Updates -->
-        <section id="news" class="py-20 relative z-10">
+        <section id="news" class="py-20 relative z-20 bg-gradient-to-b from-white/0  to-black">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">News & Updates</h2>
-                    <p class="text-gray-600 text-base md:text-lg font-[200]">Stay updated with the latest in healthcare innovation.</p>
+                    <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">News & Updates</h2>
+                    <p class="text-white/90 text-base md:text-lg font-[200]">Stay updated with the latest in healthcare innovation.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bendo-card p-4 text-left fade-in">
@@ -599,12 +621,17 @@
                     </div>
                 </div>
                 <div class="mt-12 text-center">
-                    <button class="bendo-button bg-blue-600 text-white hover:bg-blue-700"><i class="fas fa-newspaper mr-2"></i>View All News</button>
+                    <button class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
+                        <i class="fas fa-newspaper mr-2"></i>View All News
+                    </button>
                 </div>
+
             </div>
         </section>
 
     </div>
+
+</div>
 
 
     <!-- Professional Directory -->
@@ -1005,8 +1032,9 @@
     <!-- Footer -->
     <footer id="footer" class="gradient-bg h-[90vh] py-12 relative overflow-hidden">
         <div class="gradient-bg top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
+        <div class="absolute bg-black/20 opacity-[0.9] top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
         <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-1">
-            <video autoplay muted loop playsinline class="bg-video w-full h-full object-cover">
+            <video autoplay muted loop playsinline class="bg-video opacity-[0.8] w-full h-full object-cover">
                 <source src="footer1.mp4" type="video/mp4">
             </video>
         </div>
@@ -1014,7 +1042,7 @@
             <h1 class="text-4xl lg:text-6xl text-center font-bold mb-10 text-white">Join Our Newsletter & <br> Stay Up to Date</h1>
             <div class="flex w-1/2 mx-auto">
                 <input type="email" placeholder="Enter your email address" class="flex-1 p-4 border border-gray-300 rounded-l-lg focus:ring-0 text-black">
-                <button class="bg-[#6BF771]/60 backdrop-blur text-white px-8 py-4 border-r border-t border-b border-white/40 font-semibold transition rounded-r-lg">Subscribe</button>
+                <button class="bg-[#6BF771]/70 backdrop-blur text-white px-8 py-4  font-semibold transition rounded-r-lg">Subscribe</button>
             </div>
         </div>
         <div class="container mx-auto px-4 relative z-10 border-t border-white/30">
@@ -1081,6 +1109,6 @@
         </div>
     </footer>
   
-    <script src="medical.js"></script>
+    <!-- <script src="medical.js"></script> -->
 </body>
 </html>
