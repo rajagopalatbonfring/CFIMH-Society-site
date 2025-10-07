@@ -39,6 +39,8 @@
             z-index: -1; 
         }
 
+
+
         .bg-img-overlay{
             background-image: url("8989.jpg");
             background-position: bottom;
@@ -54,13 +56,13 @@
             background-repeat: no-repeat;
         }
 
-/* 
-        .resource-overlay{
-            background-image: url("awards-clinic.jpg");
+
+        .award-bg-overlay{
+            background-image: url("hexagonal_network.jpg");
             background-position: top;
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
-        } */
+        }
 
         .greenclr {
             color: #6BF771;
@@ -77,6 +79,28 @@
             right: 0;
             bottom: 0;
             background-image: url("hero3.png"); /*hexagonal_network.jpg*/
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+        #cta {
+            background-image: url("heartbeat.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+
+        .footer-gradient-bg::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("hexagonal_network.jpg"); /*hexagonal_network.jpg*/
             background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
@@ -343,20 +367,22 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-20">
                     <div class="bendo-card p-6 text-center fade-in">
                         <h4 class="text-xl font-bold mb-2">Phase III Trial for a Novel Diabetes Drug</h4>
-                        <p class="font-[200] text-[#6BF771] text-lg mb-2">$5M in funding</p>
-                        <p class="font-[200] text-gray-500 mb-4">500 needed</p>
+                        <p class="font-[300] text-blue-600 text-lg mb-2">$5M in funding</p>
+                        <p class="font-[300] text-gray-500 mb-4">500 needed</p>
                         <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>
                     </div>
                     <div class="bendo-card p-6 text-center fade-in">
                         <h4 class="text-xl font-bold mb-2">Longitudinal Study on Post-Viral Fatigue</h4>
-                        <p class="font-[200] text-[#6BF771] text-lg mb-2">$1.2M in funding</h2>
-                        <p class="font-[200] text-gray-500 mb-4">2,000 needed</p>
-                        <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>                </div>
+                        <p class="font-[300] text-blue-600 text-lg mb-2">$1.2M in funding</h2>
+                        <p class="font-[300] text-gray-500 mb-4">2,000 needed</p>
+                        <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>                
+                    </div>
                     <div class="bendo-card p-6 text-center fade-in">
                         <h4 class="text-xl font-bold mb-2">Genomic Sequencing of Rare Cancers</h4>
-                        <p class="font-[200] text-[#6BF771] text-lg mb-2">$2.5M in funding</p>
-                        <p class="font-[200] text-gray-500 mb-4">100 needed</p>
-                        <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>                </div>
+                        <p class="font-[300] text-blue-600 text-lg mb-2">$2.5M in funding</p>
+                        <p class="font-[300] text-gray-500 mb-4">100 needed</p>
+                        <button class="font-[300] bendo-button border-2 text-grey-300">Learn More & Participate</button>                
+                    </div>
                 </div>
             </div>
         </section>
@@ -722,15 +748,15 @@
     <!-- Awards & Recognition -->
     <section id="awards" class="py-20 relative bg-black">
         <!-- <div class="m-4 absolute inset-0 z-10 bg-white/20 rounded-md"></div>  -->
-        <div class="absolute inset-0 z-10 bg-gradient-to-l from-blue-600/30 to-black rounded-l-full"></div> 
-        <div class="absolute inset-0 z-10 bg-gradient-to-r from-blue-600/30 to-black rounded-l-full"></div>
+        <div class="award-bg-overlay mx-6 absolute inset-0 z-10 rounded-2xl "></div> 
+        <div class="mx-6 absolute inset-0 z-10 bg-black/30 backdrop-blur-2xl rounded-2xl border border-white/20"></div>
         <div class="container mx-auto px-4 py-8">
             <div class="text-center mb-12 z-10 relative">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white Section-heading">Awards & Recognition</h2>
                 <p class="text-white/90 text-base md:text-lg font-[200]">Celebrating excellence in medical education and research</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-32 z-10 relative">
-                <div class="bendo-card rounded-full p-8 text-center fade-in">
+                <div class="bendo-card p-8 text-center fade-in">
                     <div class="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-medal text-yellow-600 text-3xl"></i>
                     </div>
@@ -738,7 +764,7 @@
                     <p class="text-gray-600 mb-2 text-sm  font-[200]">American Medical Association</p>
                     <p class="text-gray-500 text-sm  font-[200]">2024</p>
                 </div>
-                <div class="bendo-card rounded-full p-8 text-center fade-in">
+                <div class="bendo-card p-8 text-center fade-in">
                     <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-globe-americas text-blue-600 text-3xl"></i>
                     </div>
@@ -746,7 +772,7 @@
                     <p class="text-gray-600 mb-2 text-sm  font-[200]">World Health Organization</p>
                     <p class="text-gray-500 text-sm  font-[200]">2024</p>
                 </div>
-                <div class="bendo-card rounded-full p-8 text-center fade-in">
+                <div class="bendo-card p-8 text-center fade-in">
                     <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-trophy text-green-600 text-3xl"></i>
                     </div>
@@ -1032,13 +1058,14 @@
     </section>
 
     <!-- CTA -->
-    <section id="cta" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
-        <div class="container mx-auto px-4">
+    <section id="cta" class="py-20 relative" >
+        <div class="absolute backdrop-blur-2xl bg-black/40 top-0 left-0 right-0 bottom-0 z-10 "></div>
+        <div class="relative z-20 container mx-auto px-4">
             <div class="p-12 text-center relative fade-in">
-                <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Join the Global Community Advancing Medical Excellence</h2>
-                    <p class="text-gray-600 mb-8 max-w-2xl mx-auto text-base md:text-lg font-[200]">Access cutting-edge research, earn CME credits, collaborate with leading medical minds worldwide, and shape the future of healthcare.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="relative z-20">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white relative z-20">Join the Global Community Advancing Medical Excellence</h2>
+                    <p class="text-white/90 mb-8 max-w-2xl mx-auto text-base md:text-lg font-[200] relative z-20">Access cutting-edge research, earn CME credits, collaborate with leading medical minds worldwide, and shape the future of healthcare.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20">
                         <button class="bendo-button bg-white text-blue-600 hover:bg-gray-100"><i class="fas fa-user-plus mr-2"></i> Apply for Membership</button>
                         <button class="bendo-button bg-blue-800 text-white hover:bg-blue-900"><i class="fas fa-calendar mr-2"></i> Schedule Information Session</button>
                     </div>
@@ -1049,9 +1076,9 @@
 
 
     <!-- Footer -->
-    <footer id="footer" class="gradient-bg h-[90vh] py-12 relative overflow-hidden">
-        <div class="gradient-bg top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
-        <div class="absolute bg-black/20 opacity-[0.9] top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
+    <footer id="footer" class="footer-gradient-bg h-[90vh] py-12 relative overflow-hidden">
+        <div class="footer-gradient-bg top-0 left-0 right-0 bottom-0 z-10"></div>
+        <div class="absolute bg-black/70 top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-1">
             <video autoplay muted loop playsinline class="bg-video opacity-[0.8] w-full h-full object-cover">
                 <source src="footer1.mp4" type="video/mp4">
