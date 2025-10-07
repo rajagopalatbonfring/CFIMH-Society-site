@@ -16,7 +16,7 @@
             font-optical-sizing: auto;
             font-weight: 100;
             font-style: normal;
-            background: #000;
+            background: #040710;
         }
 
 
@@ -86,17 +86,17 @@
             opacity: 1;
         }
 
-        #cta {
-            /* background-image: url("heartbeat.jpg");
+        #cta-deep {
+            background-image: url("nobg-cta.png");
             background-repeat: no-repeat;
             background-position: center;
-            background-size: cover; */
+            background-size: contain;
         }
 
         #membership{
             background-image: url("heartbeat.jpg");
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: bottom;
             background-size: cover;
         }
 
@@ -895,6 +895,10 @@
     <!-- Resources & Services -->
     <section id="resources" class="resource-overlay relative pt-20 bg-gradient-to-r from-blue-800/90 to-[black]">
         <div class="absolute inset-0 z-20 bg-gradient-to-l from-black/80 to-black"></div> 
+        <div class="text-center mb-32 relative z-20">
+            <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Resources & Services</h2>
+            <p class="text-white/90 max-w-2xl mx-auto text-base md:text-lg font-[200]">A suite of powerful tools and services to support your professional journey.</p>
+        </div>
         <div class="container mx-auto flex px-4">
             <div class="z-20 w-1/2 grid grid-cols-1 sm:grid-cols-2 lg:max-h-96 lg:grid-cols-2 gap-8 mx-44">
                 <div class="bg-white/10 p-6 text-center fade-in rounded-3xl">
@@ -939,10 +943,10 @@
 
     
     <!-- Testimonials & Success Stories -->
-    <section id="testimonials" class="py-20 bg-black">
+    <section id="testimonials" class="py-20 bg-white/10">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Testimonials & Success Stories</h2>
+                <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Testimonials & Success Stories</h2>
                 <p class="text-white/90 text-base md:text-lg font-[200]">Hear from our community of healthcare leaders.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mx-32 mb-24">
@@ -1014,11 +1018,11 @@
 
     <!-- Membership -->
     <section id="membership" class="py-20 relative rounded">
-        <!-- <div class="absolute bg-gradient-to-b from-black/0 to-black top-0 left-0 right-0 bottom-0 z-10 "></div> -->
+        <div class="absolute bg-gradient-to-b from-transparent to-black top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="absolute backdrop-blur-2xl bg-black/0 top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="container mx-auto px-4 relative z-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Professional Membership Options</h2>
+                <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Professional Membership Options</h2>
                 <p class="text-white/90 max-w-2xl mx-auto text-base md:text-lg font-[200]">Join the global community advancing medical excellence through collaboration and research</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-36">
@@ -1068,14 +1072,13 @@
     </section>
 
     <!-- CTA -->
-    <section id="cta" class="py-20 relative rounded-full" >
-        <div class="absolute bg-gradient-to-b from-black/0 to-black top-0 left-0 right-0 bottom-0 z-10 "></div>
-        <div class="absolute backdrop-blur-2xl bg-black/0 top-0 left-0 right-0 bottom-0 z-10 "></div>
-        <div class="relative z-20 container mx-auto px-4">
-            <div class="p-12 text-center relative fade-in">
+    <section id="cta" class="py-20 min-h-[40vh] bg-black relative overflow-hidden" >
+        <div class="relative z-20 container mx-auto px-4 py-16 bg-gradient-to-r from-white/50 to-white rounded-2xl">
+            <div id="cta-deep" class="absolute bg-gradient-to-r from-blue-900/80 to-white/40 top-0 left-0 right-0 bottom-0 z-10 "></div>
+            <div class="p-12 text-center relative z-20 fade-in">
                 <div class="relative z-20">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white relative z-20">Join the Global Community Advancing Medical Excellence</h2>
-                    <p class="text-white/90 mb-8 max-w-2xl mx-auto text-base md:text-lg font-[200] relative z-20">Access cutting-edge research, earn CME credits, collaborate with leading medical minds worldwide, and shape the future of healthcare.</p>
+                    <p class="text-white/90 mb-8 max-w-2xl mx-auto text-base md:text-lg font-[300] relative z-20">Access cutting-edge research, earn CME credits, collaborate with leading medical minds worldwide, and shape the future of healthcare.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20">
                         <button class="bendo-button bg-white text-blue-600 hover:bg-gray-100"><i class="fas fa-user-plus mr-2"></i> Apply for Membership</button>
                         <button class="bendo-button bg-blue-800 text-white hover:bg-blue-900"><i class="fas fa-calendar mr-2"></i> Schedule Information Session</button>
@@ -1087,7 +1090,7 @@
 
 
     <!-- Footer -->
-    <footer id="footer" class="mx-2 my-8 rounded-2xl gradient-bg h-[90vh] py-12 relative overflow-hidden">
+    <footer id="footer" class="mx-2 my-8 rounded-2xl gradient-bg bg-black h-[90vh] py-12 relative overflow-hidden">
         <div class="absolute bg-black/10 top-0 left-0 right-0 bottom-0 z-10"></div>
         <div class="absolute bg-blue-900/0 backdrop-blur top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-10">
