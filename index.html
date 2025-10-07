@@ -87,6 +87,13 @@
         }
 
         #cta {
+            /* background-image: url("heartbeat.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; */
+        }
+
+        #membership{
             background-image: url("heartbeat.jpg");
             background-repeat: no-repeat;
             background-position: center;
@@ -932,11 +939,11 @@
 
     
     <!-- Testimonials & Success Stories -->
-    <section id="testimonials" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="testimonials" class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Testimonials & Success Stories</h2>
-                <p class="text-gray-600 text-base md:text-lg font-[200]">Hear from our community of healthcare leaders.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Testimonials & Success Stories</h2>
+                <p class="text-white/90 text-base md:text-lg font-[200]">Hear from our community of healthcare leaders.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mx-32 mb-24">
                 <div class="bendo-card p-6 text-left fade-in">
@@ -970,35 +977,35 @@
                 </div>
             </div>
             <div class="text-center">
-                <h3 class="text-2xl font-bold mb-14 text-gray-900">Impact at a Glance</h3>
+                <h3 class="text-2xl font-bold mb-14 text-white">Impact at a Glance</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 mx-40">
                     <div class="p-4 text-center fade-in">
                         <div class="bg-blue-600 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-2">
                             <i class="fas fa-users text-3xl"></i>
                         </div>
-                        <p class="font-semibold text-4xl">500+</p>
-                        <p class="text-gray-600 text-lg font-[200]">Members</p>
+                        <p class="font-semibold text-white text-4xl">500+</p>
+                        <p class="text-white/90 text-lg font-[200]">Members</p>
                     </div>
                     <div class="p-4 text-center fade-in">
                         <div class="bg-green-600 text-white w-20 h-20  rounded-full flex items-center justify-center mx-auto mb-2">
                             <i class="fas fa-award text-3xl"></i>
                         </div>
-                        <p class="font-semibold text-4xl">50+</p>
-                        <p class="text-gray-600 text-lg font-[200]">Awards</p>
+                        <p class="font-semibold text-white text-4xl">50+</p>
+                        <p class="text-white/90 text-lg font-[200]">Awards</p>
                     </div>
                     <div class="p-4 text-center fade-in">
                         <div class="bg-purple-600 text-white w-20 h-20  rounded-full flex items-center justify-center mx-auto mb-2">
                             <i class="fas fa-globe text-3xl"></i>
                         </div>
-                        <p class="font-semibold text-4xl">65</p>
-                        <p class="text-gray-600 text-lg font-[200]">Countries</p>
+                        <p class="font-semibold text-white text-4xl">65</p>
+                        <p class="text-white/90 text-lg font-[200]">Countries</p>
                     </div>
                     <div class="p-4 text-center fade-in">
                         <div class="bg-orange-600 text-white w-20 h-20  rounded-full flex items-center justify-center mx-auto mb-2">
                              <i class="fas fa-heartbeat text-3xl"></i>
                         </div>
-                        <p class="font-semibold text-4xl">95%</p>
-                        <p class="text-gray-600 text-lg font-[200]">Satisfaction</p>
+                        <p class="font-semibold text-white text-4xl">95%</p>
+                        <p class="text-white/90 text-lg font-[200]">Satisfaction</p>
                     </div>
                 </div>
             </div>
@@ -1006,11 +1013,13 @@
     </section>
 
     <!-- Membership -->
-    <section id="membership" class="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
-        <div class="container mx-auto px-4">
+    <section id="membership" class="py-20 relative rounded">
+        <!-- <div class="absolute bg-gradient-to-b from-black/0 to-black top-0 left-0 right-0 bottom-0 z-10 "></div> -->
+        <div class="absolute backdrop-blur-2xl bg-black/0 top-0 left-0 right-0 bottom-0 z-10 "></div>
+        <div class="container mx-auto px-4 relative z-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Professional Membership Options</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-[200]">Join the global community advancing medical excellence through collaboration and research</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Professional Membership Options</h2>
+                <p class="text-white/90 max-w-2xl mx-auto text-base md:text-lg font-[200]">Join the global community advancing medical excellence through collaboration and research</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-36">
                 <div class="bendo-card p-8 relative fade-in">
@@ -1023,10 +1032,10 @@
                         <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> CME programs at member rates</li>
                         <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Research publication opportunities</li>
                     </ul>
-                    <button class="bendo-button w-full bg-gray-200 text-gray-900  hover:bg-blue-700">Join Now</button>
+                    <button class="bendo-button w-full bg-gray-200 text-gray-900  hover:bg-blue-700 hover:text-white">Join Now</button>
                 </div>
-                <div class="bendo-card p-8 relative border-2 border-blue-600 fade-in">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                <div class="bendo-card p-8 relative fade-in">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#6BF771] text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                     </div>
                     <div class="text-center mb-6">
@@ -1039,7 +1048,7 @@
                         <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Ethics consultation services</li>
                         <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Peer review opportunities</li>
                     </ul>
-                    <button class="bendo-button w-full bg-blue-600 text-white hover:bg-blue-700">Join Now</button>
+                    <button class="bendo-button w-full bg-blue-600 text-white hover:bg-blue-700 hover:text-white">Join Now</button>
                 </div>
                 <div class="bendo-card p-8 fade-in">
                     <div class="text-center mb-6">
@@ -1052,7 +1061,7 @@
                         <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Custom training programs</li>
                         <li class="flex items tems-center"><i class="fas fa-check text-green-500 mr-3"></i> Priority research collaboration</li>
                     </ul>
-                    <button class="bendo-button w-full bg-gray-200 text-gray-900 hover:bg-blue-700">Contact Sales</button>
+                    <button class="bendo-button w-full bg-gray-200 text-gray-900 hover:bg-blue-700 hover:text-white">Contact Sales</button>
                 </div>
             </div>
         </div>
@@ -1060,7 +1069,8 @@
 
     <!-- CTA -->
     <section id="cta" class="py-20 relative rounded-full" >
-        <div class="absolute backdrop-blur-2xl bg-black/40 top-0 left-0 right-0 bottom-0 z-10 "></div>
+        <div class="absolute bg-gradient-to-b from-black/0 to-black top-0 left-0 right-0 bottom-0 z-10 "></div>
+        <div class="absolute backdrop-blur-2xl bg-black/0 top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="relative z-20 container mx-auto px-4">
             <div class="p-12 text-center relative fade-in">
                 <div class="relative z-20">
