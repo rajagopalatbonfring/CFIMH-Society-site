@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
 
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
-        body{
+        body {
             font-family: "Sora", sans-serif;
             font-optical-sizing: auto;
             font-weight: 100;
             font-style: normal;
-            background: #040710;
+            background: #040811;
+            margin: 0;
+            overflow-x: hidden;
         }
-
 
         .gradient-bg {
             position: relative;
         }
 
-        .overlay-hero{
+        .overlay-hero {
             opacity: .7;
         }
-
 
         .overlay-hero video {
             position: absolute;
@@ -37,28 +37,25 @@
             min-width: 100%;
             min-height: 100%;
             object-fit: cover;
-            z-index: -1; 
+            z-index: -1;
         }
 
-
-
-        .bg-img-overlay{
+        .bg-img-overlay {
             background-image: url("8989.jpg");
             background-position: bottom;
             background-size: contain;
             background-repeat: no-repeat;
         }
 
-
-        .bg-img-overlay2{
+        .bg-img-overlay2 {
             background-image: url("element3.png");
             background-position: bottom;
             background-size: cover;
             background-repeat: no-repeat;
+        
         }
 
-
-        .award-bg-overlay{
+        .award-bg-overlay {
             background-image: url("hexagonal_network.jpg");
             background-position: top;
             background-size: cover;
@@ -71,7 +68,6 @@
             background-color: #6BF771;
         }
 
-
         .gradient-bg::before {
             content: '';
             position: absolute;
@@ -79,7 +75,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("hero3.png"); /*hexagonal_network.jpg*/
+            background-image: url("hero3.png");
             background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
@@ -89,26 +85,24 @@
         #cta-deep {
             background-image: url("nobg-cta.png");
             background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
+            background-position: right;
+            background-size: cover;
         }
 
-        #membership{
+        #membership {
             background-image: url("heartbeat.jpg");
             background-repeat: no-repeat;
             background-position: bottom;
             background-size: cover;
         }
 
-
-
-        .footer-gradient-bg::before{
+        .footer-gradient-bg::before {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("hexagonal_network.jpg"); /*hexagonal_network.jpg*/
+            background-image: url("hexagonal_network.jpg");
             background-position: top;
             background-repeat: no-repeat;
             background-size: cover;
@@ -116,18 +110,16 @@
         }
 
         .Section-heading::after {
-            content: ''; 
+            content: '';
             display: block;
-            width: 100px; 
+            width: 100px;
             padding-top: 8px;
-            height: 3px; 
-            background: #6BF771; 
+            height: 3px;
+            background: #6BF771;
             border-radius: 4px;
-            margin: 0 auto; 
+            margin: 0 auto;
         }
 
-
-        /* Custom Bendo UI-inspired styles */
         .bendo-card {
             background: rgb(255, 255, 255);
             backdrop-filter: blur(10px);
@@ -135,42 +127,229 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .bendo-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
+
         .bendo-gradient {
             background: linear-gradient(135deg, #1567e6, #a855f7);
         }
+
         .bendo-button {
             border-radius: 9999px;
             padding: 0.75rem 1.5rem;
             font-weight: 600;
             transition: all 0.3s ease;
         }
+
         .bendo-button:hover {
             transform: scale(1.05);
         }
+
+        .cfimh-nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+        }
+
+        .group:hover .group-hover\:visible {
+            visibility: visible;
+        }
+
+        .group:hover .group-hover\:rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            min-width: 240px;
+        }
+
+        .dropdown-item {
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu.show {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-button.active .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-button.active .line2 {
+            opacity: 0;
+        }
+
+        .mobile-menu-button.active .line3 {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        .mobile-accordion-item.active .mobile-accordion-trigger i {
+            transform: rotate(180deg);
+        }
+
+        .mobile-accordion-item.active .mobile-accordion-content {
+            max-height: 500px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .nav-link:focus,
+        .dropdown-item:focus,
+        .mobile-nav-item:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+
+        /* Enhanced Responsive Adjustments */
+        @media (max-width: 1280px) {
+            .cfimh-nav {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            .dropdown-menu {
+                min-width: 200px;
+            }
+
+            .nav-link, .dropdown-item {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .cfimh-nav {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
         @media (max-width: 768px) {
+            .cfimh-nav {
+                margin-left: 0.75rem;
+                margin-right: 0.75rem;
+                height: 3.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .hero button {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
             .bendo-card {
                 border-radius: 1rem;
                 padding: 1rem;
             }
+
             .text-4xl {
                 font-size: 1.5rem;
             }
+
             .text-3xl {
                 font-size: 1.25rem;
             }
         }
+
+        @media (max-width: 640px) {
+            .cfimh-nav {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                height: 3rem;
+            }
+
+            .cfimh-nav .text-xl {
+                font-size: 1rem;
+            }
+
+            .mobile-menu {
+                width: 100%;
+                max-width: none;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.8rem;
+            }
+
+            .hero button {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cfimh-nav {
+                padding: 0.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.25rem;
+            }
+
+            .hero p {
+                font-size: 0.75rem;
+            }
+
+            .hero button {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
             .bendo-card, .bendo-button {
                 transition: none;
             }
         }
+
         .fade-in {
             animation: fadeInUp 0.6s ease-out forwards;
         }
+
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -180,8 +359,7 @@
 <body >
 
     <!-- Navigation -->
-
-    <nav class="bg-white shadow-xl fixed h-20 rounded-full mx-36 px-6 top-8 left-0 right-0 z-50 flex align-center justify-evenly">
+    <!-- <nav class="bg-white shadow-xl fixed h-20 rounded-full mx-36 px-6 top-8 left-0 right-0 z-50 flex align-center justify-evenly">
         <div class="container m-0 p-0">
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center justify-between ">
@@ -211,57 +389,297 @@
                 </div>
             </div>
         </div>
+    </nav> -->
+    <nav class="cfimh-nav bg-white shadow-xl fixed rounded-full top-8 left-4 right-4 md:left-8 md:right-8 lg:mx-36 px-4 md:px-6 h-16 md:h-20 z-50 flex items-center justify-between">
+        <div class="flex align-center justify-center">
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex align-center justify-center">
+                <button id="mobile-menu-button" class="mobile-menu-button p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                    <div class="hamburger-lines">
+                        <span class="line line1 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
+                        <span class="line line2 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
+                        <span class="line line3 block w-6 h-0.5 bg-current transition-all duration-300"></span>
+                    </div>
+                </button>
+            </div>    
+        
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <div class="text-[#75adfc] px-2 md:px-3 py-2 md:py-3 rounded-full font-semibold text-xl md:text-3xl flex items-center justify-center">
+                    <i class="fas fa-stethoscope mr-2"></i>
+                    <span class="hidden sm:inline">CF</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex space-x-6 xl:space-x-8 items-center text-sm">
+            <!-- Home -->
+            <a href="#hero" class="nav-link text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+                HOME
+            </a>
+            
+            <!-- About Dropdown -->
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    ABOUT
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#mission" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-bullseye mr-2 text-[#6BF771]"></i>Mission & Vision
+                        </a>
+                        <a href="#leadership" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-users mr-2 text-[#6BF771]"></i>Leadership Council
+                        </a>
+                        <a href="#advisory" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-user-tie mr-2 text-[#6BF771]"></i>Advisory Board
+                        </a>
+                        <a href="#ethics" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-balance-scale mr-2 text-[#6BF771]"></i>Ethics Committee
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Dropdown -->
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    RESEARCH
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#clinical-studies" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-microscope mr-2 text-[#6BF771]"></i>Clinical Studies
+                        </a>
+                        <a href="#research-papers" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-file-alt mr-2 text-[#6BF771]"></i>Research Papers
+                        </a>
+                        <a href="#peer-review" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-search mr-2 text-[#6BF771]"></i>Peer Review
+                        </a>
+                        <a href="#publications" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-book mr-2 text-[#6BF771]"></i>Publications
+                        </a>
+                        <a href="#methodology" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-cogs mr-2 text-[#6BF771]"></i>Methodology Guidelines
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CME & Education Dropdown -->
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    CME
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#cme-programs" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-graduation-cap mr-2 text-[#6BF771]"></i>CME Programs
+                        </a>
+                        <a href="#certification" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-certificate mr-2 text-[#6BF771]"></i>Certification Courses
+                        </a>
+                        <a href="#webinars" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-video mr-2 text-[#6BF771]"></i>Webinar Series
+                        </a>
+                        <a href="#skills-training" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-tools mr-2 text-[#6BF771]"></i>Skills Training
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forum -->
+
+
+            <!-- Events -->
+            <a href="#events" class="nav-link text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+                EVENTS
+            </a>
+
+            <!-- More Dropdown -->
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    MORE
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#resources" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-folder mr-2 text-[#6BF771]"></i>Resources
+                        </a>
+                        <a href="#membership" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-id-card mr-2 text-[#6BF771]"></i>Membership
+                        </a>
+                        <a href="#ethics-consultation" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-phone mr-2 text-[#6BF771]"></i>Ethics Consultation
+                        </a>
+                        <a href="#guidelines" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-clipboard-list mr-2 text-[#6BF771]"></i>Clinical Guidelines
+                        </a>
+                        <a href="#contact" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-envelope mr-2 text-[#6BF771]"></i>Contact
+                        </a>
+                        <a href="#forums" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            Forum
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop CTA Button -->
+        <div class="hidden md:flex items-center space-x-4">
+            <button class="bg-blue-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 text-sm">
+                Submit Research
+            </button>
+        </div>
     </nav>
 
-<!-- 
-    <div class=" fixed h-24 border-1 border-grey-100 rounded-b-xl mx-4 px-6 top-0 left-0 right-0 z-50 flex align-center justify-evenly">
-        <div class="container m-0 p-0  mx-14">
-            <div class="flex pt-3 items-start justify-between h-full">
-                <div>
-                    social icon 1
-                    social icon 2
-                    social icon 3
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden opacity-0 invisible transition-all duration-300"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-sm bg-white shadow-2xl z-50 lg:hidden transform translate-x-full transition-transform duration-300 overflow-y-auto">
+        <!-- Mobile Menu Header -->
+        <div class="mobile-menu-header p-6 border-b border-gray-200">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-[#75adfc] text-2xl font-bold">
+                        <i class="fas fa-stethoscope mr-2"></i>
+                        CF
+                    </div>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <button class="text-gray-600 hover:text-blue-600">
-                        <input type="text" name="" id="">
-                        <i class="fas fa-search text-xl"></i>
+                <button id="mobile-menu-close" class="p-2 rounded-lg text-gray-500 hover:bg-white hover:text-gray-700 transition-colors duration-200">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Items -->
+        <div class="mobile-menu-content p-4">
+            <!-- Mobile CTA Button -->
+            <div class="mb-6">
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+                    Submit Research
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Items -->
+            <div class="space-y-2">
+                <!-- Home -->
+                <a href="#hero" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-home mr-3 text-blue-400 w-5"></i>Home
+                </a>
+
+                <!-- About Accordion -->
+                <div class="mobile-accordion-item">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                        <span><i class="fas fa-info-circle mr-3 text-blue-400 w-5"></i>About</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200"></i>
                     </button>
-                    <div class="hidden md:flex space-x-8 gap-y-4  align-center justify-center">
-                        <a class="text-gray-700 font-semibold">login | Signup | Support</a>
+                    <div class="mobile-accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="pl-12 pr-4 py-2 space-y-1">
+                            <a href="#mission" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Mission & Vision</a>
+                            <a href="#leadership" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Leadership Council</a>
+                            <a href="#advisory" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Advisory Board</a>
+                            <a href="#ethics" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Ethics Committee</a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Research Accordion -->
+                <div class="mobile-accordion-item">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                        <span><i class="fas fa-microscope mr-3 text-blue-400 w-5"></i>Research</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="pl-12 pr-4 py-2 space-y-1">
+                            <a href="#clinical-studies" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Clinical Studies</a>
+                            <a href="#research-papers" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Research Papers</a>
+                            <a href="#peer-review" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Peer Review</a>
+                            <a href="#publications" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Publications</a>
+                            <a href="#methodology" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Methodology Guidelines</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CME & Education Accordion -->
+                <div class="mobile-accordion-item">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                        <span><i class="fas fa-graduation-cap mr-3 text-blue-400 w-5"></i>CME & Education</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="pl-12 pr-4 py-2 space-y-1">
+                            <a href="#cme-programs" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">CME Programs</a>
+                            <a href="#certification" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Certification Courses</a>
+                            <a href="#webinars" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Webinar Series</a>
+                            <a href="#skills-training" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Skills Training</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forum -->
+                <a href="#forums" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-comments mr-3 text-blue-400 w-5"></i>Forum
+                </a>
+
+                <!-- Events -->
+                <a href="#events" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-calendar mr-3 text-blue-400 w-5"></i>Events
+                </a>
+
+                <!-- Resources -->
+                <a href="#resources" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-folder mr-3 text-blue-400 w-5"></i>Resources
+                </a>
+
+                <!-- Membership -->
+                <a href="#membership" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-id-card mr-3 text-blue-400 w-5"></i>Membership
+                </a>
+
+                <!-- Contact -->
+                <a href="#contact" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-envelope mr-3 text-blue-400 w-5"></i>Contact
+                </a>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- Hero Section -->
-    <section id="hero" class="gradient-bg h-[60vh] md:h-[70vh] lg:h-[95vh] mx-2 my-4 rounded-2xl relative overflow-hidden flex align-center justify-center">
-        <div class="gradient-bg top-0 left-0 right-0 bottom-0 z-10 rounded-xl "></div>
+    <section id="hero" class="gradient-bg h-[90vh] pt-28 sm:pt-10 md:pt-0 sm:h-[75vh] md:h-[85vh]  lg:h-[95vh] mx-2 my-4 rounded-2xl relative overflow-hidden flex items-center justify-center">
+        <div class="gradient-bg top-0 left-0 right-0 bottom-0 z-10 rounded-xl"></div>
         <div class="absolute inset-0 bg-[#214582]/20 backdrop-blur-xs z-10"></div>
         <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-1">
-            <video autoplay muted loop playsinline class="bg-video object-cover">
+            <video autoplay muted loop playsinline class="bg-video object-cover w-full h-full">
                 <source src="bgVideo.mp4" type="video/mp4">
             </video>
         </div>
         
-        <div class="relative w-full py-20 z-10 flex items-center justify-center ">
-            <div class=" text-white mb-10 lg:mb-0">
-                <h1 class="text-[#6BF771] mb-4 text-center font-[300] ">Advancing Medical Excellence Through Evidence-Based Collaboration</h1>
-                <h1 class="text-6xl lg:text-8xl font-bold mb-6 leading-tight text-center text-white">
+        <div class="relative w-full py-10 sm:py-20 z-10 flex items-center justify-center">
+            <div class="text-white mb-10 lg:mb-0 text-center px-4 sm:px-6">
+                <h1 class="text-[#6BF771] mb-4 font-[300] text-md sm:text-xl md:text-2xl">Advancing Medical Excellence Through Evidence-Based Collaboration</h1>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight">
                     Shaping the Future of<br/>Healthcare Through<br/>Intellectual Rigor
                 </h1>
-                <p class="text-blue-100 mb-8 text-lg  font-[200] leading-relaxed text-center">
+                <p class="text-blue-100 mb-8 text-sm sm:text-base md:text-lg font-[200] leading-relaxed">
                     Join 25,000+ leading medical professionals, researchers, and healthcare<br/>
                     innovators dedicated to advancing patient care through evidence-based<br/>
                     practice and ethical excellence.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center align-center">
-                    <button class="bg-[#6BF771]/70 backdrop-blur text-white px-8 py-4 rounded-full border border-white/40 font-semibold transition">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button class="bg-[#6BF771]/70 backdrop-blur text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-white/40 font-semibold transition">
                         Explore Clinical Research <i class="fas fa-arrow-right ml-2"></i>
                     </button>
-                    <button class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
+                    <button class="bg-white/20 backdrop-blur text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
                         <i class="fas fa-users mr-2"></i> Join Professional Forum
                     </button>
                 </div>
@@ -270,14 +688,12 @@
     </section>
 
 
-<!-- bg-img-overlay  -->
-<div class=" bg-img-overlay2 relative">
-        <!-- <div class="absolute inset-0  bg-gradient-to-b from-white to-white/0"></div> -->
-        <!-- <div class="absolute inset-0  bg-gradient-to-b from-white/0  to-white"></div> -->
-
+    <!-- bg-img-overlay  -->
+    <div class=" bg-img-overlay2 relative">
+        
         <!-- Metrics (Bendo UI Design) -->
-        <section class="absolute -top-32 z-30 mx-4 md:mx-64 font-[300]">
-            <div class="bg-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-2xl px-32 py-10">
+        <section class="overflow-hidden relative top-0 bg-[#040811] lg:absolute lg:-top-36 lg:bg-black/0 z-30 mx-auto font-[300] w-full">
+            <div class="bg-none grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-2xl px-10 sm:px-32 py-10 mx-0 md:mx-12">
                 <div class="bendo-card p-6 text-center fade-in">
                     <i class="fas fa-user-md text-blue-600 text-3xl mb-3"></i>
                     <div class="text-3xl font-bold text-blue-900">25,000+</div>
@@ -306,35 +722,33 @@
         <div class="absolute inset-0 z-10 bg-blue-900/10 backdrop-blur"></div>
 
         <!-- About Section -->
-        <section id="about" class="py-8 pt-32 relative bg-gradient-to-b from-[black]/50 to-black/0 z-20">
-            <div class="container bg-white bendo-card mx-auto flex flex-col md:flex-row items-center justify-center">
-                <div class="p-8 md:p-12 text-left max-w-2xl fade-in">
-                    <p class="text-[#6BF771] font-semibold text-xl mb-1">About</p>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Pioneering the Future of Global Health</h2>
-                    <p class="font-[200] text-gray-600 mb-8 text-base md:text-lg">Founded on the principles of collaboration and innovation, the Global Health Nexus has been at the forefront of medical advancement for over two decades. We connect professionals from 120+ countries, fostering a diverse community dedicated to improving patient outcomes worldwide.</p>
-                    <p class="text-gray-600 font-[200]  mb-8 text-base md:text-lg">Our mission is to accelerate research, standardize best practices, and provide unparalleled resources for healthcare providers at every stage of their careers.</p>
-                    <button class="bg-white text-[#1567e6] px-8 py-4 rounded-full border-2 font-semibold hover:bg-gray-100 transition">Learn More About Our Mission</button>
+        <section id="about" class="overflow-hidden py-8 lg:pt-40 relative bg-gradient-to-b from-black/50 to-black/0 z-20">
+            <div class="container relative bg-white bendo-card mx-auto flex flex-col items-center justify-evenly lg:flex-row lg:justify-center">
+                <div class="py-4 sm:py-8 md:py-12 md:pl-8 text-left max-w-full lg:max-w-2xl">
+                    <p class="text-[#6BF771] font-semibold text-lg sm:text-xl mb-1">About</p>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">Pioneering the Future of Global Health</h2>
+                    <p class="font-[200] text-gray-600 mb-8 text-sm sm:text-base md:text-lg">Founded on the principles of collaboration and innovation, the Global Health Nexus has been at the forefront of medical advancement for over two decades. We connect professionals from 120+ countries, fostering a diverse community dedicated to improving patient outcomes worldwide.</p>
+                    <p class="text-gray-600 font-[200] mb-8 text-sm sm:text-base md:text-lg">Our mission is to accelerate research, standardize best practices, and provide unparalleled resources for healthcare providers at every stage of their careers.</p>
+                    <button class="hidden md:block bg-white text-[#1567e6] px-6 sm:px-8 py-3 sm:py-4 rounded-full border-2 font-semibold hover:bg-gray-100 transition">Learn More About Our Mission</button>
+                    <button class="block md:hidden bg-white text-[#1567e6] px-6 sm:px-8 py-3 sm:py-4 rounded-full border-2 font-semibold hover:bg-gray-100 transition">Learn More</button>
                 </div>
-                <div class="p-4 md:p-6 mt-8 md:mt-0 md:ml-8 w-72 h-72 md:w-full md:h-full flex items-center justify-center">
-                    <img src="doctor.jpg" class="w-full h-full object-cover rounded-lg" alt="Healthcare Professional">
-                </div>
-            </div>
-            <div class="absolute mx-auto bottom-20 right-60">
-                <div class="bg-red-700/30 backdrop-blur-2xl rounded-2xl md:p-4 flex flex-col items-center justify-between fade-in">
-                    <p class="text-gray-900 font-[300] text-base md:text-xs">24/7 Access to Critical Care Protocols</p>
-                    <div class="mb-6 md:mb-0">
-                        <h3 class="text-2xl font-bold mb-2 text-white"><i class="text-red-600 fas fa-exclamation-triangle mr-2"></i>Emergency Clinical Guidelines</h3>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-white p-1 rounded-full w-8 h-8 text-red-600 hover:bg-gray-100"><i class="fas fa-heart-pulse"></i></button>
-                        <button class="bg-[#6BF771]/70 p-1 rounded-full w-8 h-8 text-white hover:bg-red-700"><i class="fas fa-phone"></i></button>
+                <div class="relative p-4 sm:p-6 md:p-8 lg:max-w-[600px] w-full flex flex-col items-center justify-center">
+                    <img src="doctor.jpg" class="w-full h-auto object-cover rounded-lg" alt="Healthcare Professional">
+                    <div class="relative mt-4 lg:absolute lg:bottom-10 lg:right-8 w-full sm:w-auto">
+                        <div class="bg-red-700/30 backdrop-blur-2xl rounded-2xl p-4 flex items-center justify-center gap-4">
+                            <button class="bg-[#6BF771]/70 p-1 rounded-full w-8 h-8 text-white hover:bg-red-700 flex items-center justify-center"><i class="fas fa-phone"></i></button>
+                            <div class="flex flex-col items-start justify-between md:mb-0">
+                                <p class=" text-gray-900 font-[300] text-xs sm:text-sm">24/7 Access to Critical Care Protocols</p>
+                                <h3 class="text-sm sm:text-xl md:text-2xl font-bold text-white">Emergency Clinical Guidelines</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Research -->
-        <section id="research" class="relative py-20 z-20">
+        <section id="research" class="overflow-hidden  relative py-20 z-20">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12 relative z-10">
                     <h2 class="Section-heading text-4xl md:text-5xl font-bold mb-4 text-white">Research Hub</h2>
@@ -372,7 +786,7 @@
                 <div class="text-center mb-12  relative z-10">
                     <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">Active Research Opportunities</h3>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                     <div class="bendo-card p-6 text-center fade-in">
                         <h4 class="text-xl font-bold mb-2">Phase III Trial for a Novel Diabetes Drug</h4>
                         <p class="font-[300] text-blue-600 text-lg mb-2">$5M in funding</p>
@@ -395,288 +809,276 @@
             </div>
         </section>
 
-
-
-    <!-- Clinical Guidelines   bg-gradient-to-b from-white/0 to-gray-200 -->
-    <section id="guidelines" class="relative py-20 z-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12 ">
-                <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Clinical Guidelines Database</h2>
-                <p class="text-white/90 max-w-2xl font-[200] mx-auto text-base md:text-lg">Access the latest evidence-based clinical guidelines and practice recommendations.</p>
-            </div>
-            <div class="flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-2/3">
-                    <h3 class="text-2xl font-bold mb-6 text-white/95">Recent Updates</h3>
-                    <div class="space-y-4"> 
-                        <div class="bendo-card p-4 flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-red-500 mr-3">❤️</span>
-                                <div>
-                                    <h4 class="font-semibold">Updated Hypertension Management Protocol</h4>
-                                    <p class="text-sm text-gray-500 font-[200]">Cardiology | 2 days ago</p>
+        <!-- Clinical Guidelines   bg-gradient-to-b from-white/0 to-gray-200 -->
+        <section id="guidelines" class="overflow-hidden relative py-20 z-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 ">
+                    <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Clinical Guidelines Database</h2>
+                    <p class="text-white/90 max-w-2xl font-[200] mx-auto text-base md:text-lg">Access the latest evidence-based clinical guidelines and practice recommendations.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-bold mb-6 text-white/95">Recent Updates</h3>
+                        <div class="space-y-4"> 
+                            <div class="bendo-card p-4 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <img src="cardiology.jpg" alt="" class="w-[80px] h-[80px] object-cover rounded-2xl">
+                                    <div>
+                                        <h4 class="font-semibold text-xl">Updated Hypertension Management Protocol</h4>
+                                        <p class="text-lg text-gray-500 font-[300]">Cardiology | 2 days ago</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bendo-card p-4 flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-blue-500 mr-3 ">🧠</span>
-                                <div>
-                                    <h4 class="font-semibold">New Guidelines for Stroke Prevention</h4>
-                                    <p class="text-sm text-gray-500 font-[200]">Neurology | 1 week ago</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bendo-card p-4 flex items-center justify-between">
-                            <div class="flex items-center">
-                                <span class="text-gray-500 mr-3">🦴</span>
-                                <div>
-                                    <h4 class="font-semibold">Osteoporosis Screening Recommendations</h4>
-                                    <p class="text-sm text-gray-500 font-[200]">Orthopedics | 2 weeks ago</p>
+                            <div class="bendo-card p-4 flex items-center justify-between">
+                                <div class="flex items-center gap-4">
+                                    <img src="stroke.jpg" alt="" class="w-[80px] h-[80px] object-cover rounded-2xl">
+                                    <div>
+                                        <h4 class="font-semibold text-xl">New Guidelines for Stroke Prevention</h4>
+                                        <p class="text-lg text-gray-500 font-[300]">Neurology | 1 week ago</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="lg:w-1/3">
-                    <div class="bendo-card p-6">
-                        <h3 class="text-2xl font-bold mb-6">Search & Filter</h3>
-                        <input type="text" placeholder="Search guidelines..." class="w-full p-3 mb-4 border border-gray-300 font-[200] rounded-lg focus:ring-2 focus:ring-blue-500">
-                        <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Filter by Specialty</label>
-                            <div class="space-y-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="mr-2" checked> <label class="font-[200]">Cardiology</label>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="mr-2"> <label class="font-[200]">Infectious Disease</label>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="mr-2"> <label class="font-[200]">Pediatrics</label>
-                                </label>
+                    <div class="lg:w-1/3">
+                        <div class="bendo-card p-6">
+                            <h3 class="text-2xl font-bold mb-6">Search & Filter</h3>
+                            <input type="text" placeholder="Search guidelines..." class="w-full p-3 mb-4 border border-gray-300 font-[200] rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Filter by Specialty</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-2" checked> <label class="font-[200]">Cardiology</label>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-2"> <label class="font-[200]">Infectious Disease</label>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-2"> <label class="font-[200]">Pediatrics</label>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <button class="font-[300] bendo-button border-2 text-grey-300 w-full">Search</button>
-                        <div class="mt-6 text-center">
-                            <p class="text-xl font-bold text-[#6BF771]">1,200+</p>
-                            <p class="text-sm font-[200] text-gray-600">Guidelines Downloaded Today</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="relative">
-
-        <!-- <div class="absolute inset-0  bg-gradient-to-b from-white to-white/0"></div> -->
-        <!-- <div class="absolute inset-0  bg-gradient-to-b from-white/0 to-white"></div> -->
-
-        <!-- Publications & Journal bg-gradient-to-b from-gray-200 to-white/0-->
-        <section id="publications" class="py-20 relative z-20 ">
-            <div class="container flex align-center justify-center mx-auto p-20 border border-white/20 rounded-2xl flex flex-col lg:flex-row gap-8 bg-gradient-to-b from-[white]/10 to-white/10">
-                <div class=" flex-col">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Publications & Journals</h2>
-                    <p class="text-white/90 font-[200] mb-6 max-w-2xl text-base md:text-lg">Explore the frontiers of medical science with the official Journal of the Global Health Nexus.</p>
-                    <div class="container flex w-full mt-4">
-                        <div class="bg-white rounded-xl p-6 text-left fade-in">
-                            <h3 class="text-xl font-bold mb-4">Subscribe to Publication Alerts</h3>
-                            <div class="flex">
-                                <input type="email" placeholder="your.email@example.com" class="flex-1 p-3 border border-gray-300 rounded-l-lg font-[200] focus:ring-0 ">
-                                <button class="bendo-button text-white rounded-l-lg bg-blue-600">Subscribe</button>
+                            <button class="font-[300] bendo-button border-2 text-grey-300 w-full">Search</button>
+                            <div class="mt-6 text-center">
+                                <p class="text-xl font-bold text-[#6BF771]">1,200+</p>
+                                <p class="text-sm font-[200] text-gray-600">Guidelines Downloaded Today</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="lg:w-1/2  h-full flex-col align-center justify-center">
-                    <div class="bg-white rounded-2xl  flex-col align-center justify-center p-6 text-left fade-in">
-                        <div class="p-3 rounded-xl text-left fade-in border-2 border-gray-300 border-dashed bg-gray-50">
-                            <h4 class="text-xl font-[300] mb-4">Featured Publications</h4>
-                            <ul class="space-y-2 text-gray-700 font-[200]">
-                                <li>The Role of Microbiome in Autoimmune Diseases</li>
-                                <li>Advances in Gene-Editing for Inherited Disorders</li>
-                                <li>Long-term Neurological Effects of COVID-19</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button class="mt-4 bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full w-full font-semibold hover:bg-white/30 transition border border-white/30">
-                        Access Latest Issue
-                    </button>
-                </div>
-                <div class="lg:w-1/2 flex flex-col gap-8 relative">
-                    <div class="p-6 text-left w-full h-full fade-in relative">
-                        <img src="journals.jpg" alt="Journal Cover" class="absolute inset-0 w-full h-full object-cover rounded-lg  z-0">
-                        <div class="relative z-10">
-                        </div>
-                    </div>
-
-                    <ul class="bg-white rounded-md p-3 absolute bottom-0 right-6 mb-6 text-green-600">
-                        <li class="flex items-center font-[200]"><span class="mr-2">✔</span> Peer-reviewed research</li>
-                        <li class="flex items-center font-[200]"><span class="mr-2">✔</span> High impact factor</li>
-                        <li class="flex items-center font-[200]"><span class="mr-2">✔</span> Monthly publications</li>
-                        <li class="flex items-center font-[200]"><span class="mr-2">✔</span> Open access options</li>
-                    </ul>
-
                 </div>
             </div>
         </section>
 
-        <!-- Events & Conferences -->
-        <section id="events" class="py-20 relative z-20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Events & Conferences</h2>
-                    <p class="text-white/90 text-base md:text-lg font-[200]">Join thousands of professionals at our premier events.</p>
+        <div class="relative">
+
+            <!-- <div class="absolute inset-0  bg-gradient-to-b from-white to-white/0"></div> -->
+            <!-- <div class="absolute inset-0  bg-gradient-to-b from-white/0 to-white"></div> -->
+
+            <!-- Publications & Journal bg-gradient-to-b from-gray-200 to-white/0-->
+            <section id="publications" class="overflow-hidden py-20 relative z-20 ">
+                <div class="container mx-auto p-4 md:p-20  border border-white/20 rounded-2xl flex flex-col align-center justify-center lg:flex-row gap-8 bg-gradient-to-b from-[white]/10 to-white/10">
+                    <div class="flex-col">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Publications & Journals</h2>
+                        <p class="text-white/90 font-[200] mb-6 max-w-2xl text-base md:text-lg">Explore the frontiers of medical science with the official Journal of the Global Health Nexus.</p>
+                        <div class="container flex w-full mt-4">
+                            <div class="bg-white rounded-xl p-6 text-left fade-in">
+                                <h3 class="text-xl font-bold mb-4">Subscribe to Publication Alerts</h3>
+                                <div class="flex flex-wrap">
+                                    <input type="email" placeholder="your.email@example.com" class="flex-1 p-3 border border-gray-300 rounded-l-lg font-[200] focus:ring-0 ">
+                                    <button class="bendo-button text-white rounded-l-lg bg-blue-600">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2  h-full flex-col align-center justify-center">
+                        <div class="bg-white rounded-2xl  flex-col align-center justify-center p-6 text-left fade-in">
+                            <div class="p-3 rounded-xl text-left fade-in border-2 border-gray-300 border-dashed bg-gray-50">
+                                <h4 class="text-xl font-[300] mb-4">Featured Publications</h4>
+                                <ul class="space-y-2 text-gray-700 font-[200]">
+                                    <li>The Role of Microbiome in Autoimmune Diseases</li>
+                                    <li>Advances in Gene-Editing for Inherited Disorders</li>
+                                    <li>Long-term Neurological Effects of COVID-19</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="mt-4 bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full w-full font-semibold hover:bg-white/30 transition border border-white/30">
+                            Access Latest Issue
+                        </button>
+                    </div>
+                    <div class="w-full h-96 lg:w-1/2 flex flex-col gap-8 relative">
+                        <div class="text-left w-full h-full fade-in relative">
+                            <img src="journals.jpg" alt="Journal Cover" class="absolute inset-0 w-full h-full object-cover rounded-lg  z-0">
+                            <div class="relative z-10">
+                            </div>
+                        </div>
+
+                        <ul class="bg-white rounded-md p-3 absolute bottom-0 right-6 mb-6 text-green-600">
+                            <li class="flex items-center font-[200]"><span class="mr-2">✔</span> Peer-reviewed research</li>
+                            <li class="flex items-center font-[200]"><span class="mr-2">✔</span> High impact factor</li>
+                            <li class="flex items-center font-[200]"><span class="mr-2">✔</span> Monthly publications</li>
+                            <li class="flex items-center font-[200]"><span class="mr-2">✔</span> Open access options</li>
+                        </ul>
+
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mx-32">
-                    <div class="relative bendo-card text-center fade-in">
-                        <img src="event1.jpg" alt="Global Summit" class="w-full h-48 object-cover rounded-t-xl">
+            </section>
+
+            <!-- Events & Conferences -->
+            <section id="events" class="overflow-hidden py-20 relative z-20">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Events & Conferences</h2>
+                        <p class="text-white/90 text-base md:text-lg font-[200]">Join thousands of professionals at our premier events.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div class="relative bendo-card text-center fade-in">
+                            <img src="event1.jpg" alt="Global Summit" class="w-full h-48 object-cover rounded-t-xl">
+                            <span class="absolute top-4 right-4 inline-block bg-[#6BF771] font-[300] text-sm text-gray-900 px-2 py-1 rounded-full mb-2">Virtual</span>
+                            <div class="p-6 font-[200] text-left">
+                                <h3 class="text-xl font-bold mb-2">Global Summit on Infectious Diseases</h3>
+                                <p><i class="fas fa-calendar-days"></i><span class="text-gray-600 mb-2 ml-2">Oct 15-18, 2024</span></p>
+                                <p><i class="fas fa-location-dot"></i><span class="ml-2 text-gray-600 mb-2">Geneva, Switzerland</span></p>
+                                <p><i class="fas fa-award"></i><span class="text-gray-600 mb-4 ml-2">24 CME Credits</span></p>
+                                <button class="bendo-button text-gray-900 border-2 mt-4 w-full ">Register Now</button>
+                            </div>
+                        </div>
+                        <div class="bendo-card text-center fade-in">
+                            <img src="event2.jpg" alt="Global Summit" class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-6 font-[200] text-left">
+                                <h3 class="text-xl font-bold mb-2">Annual Cardiology Conference</h3>
+                                <p><i class="fas fa-calendar-days"></i><span class="text-gray-600 mb-2 ml-2">Nov 5-7, 2024</span></p>
+                                <p><i class="fas fa-location-dot"></i><span class="ml-2 text-gray-600 mb-2">Boston, MA</span></p>
+                                <p><i class="fas fa-award"></i><span class="text-gray-600 mb-4 ml-2">18 CME Credits</span></p>
+                                <button class="bendo-button text-gray-900 border-2 mt-4 w-full ">Register Now</button>
+                            </div>
+                        </div>
+                        <div class="relative bendo-card text-center fade-in">
+                            <img src="event3.jpg" alt="Oncology Summit" class="w-full h-48 object-cover rounded-t-xl">
                         <span class="absolute top-4 right-4 inline-block bg-[#6BF771] font-[300] text-sm text-gray-900 px-2 py-1 rounded-full mb-2">Virtual</span>
-                        <div class="p-6 font-[200] text-left">
-                            <h3 class="text-xl font-bold mb-2">Global Summit on Infectious Diseases</h3>
-                            <p><i class="fas fa-calendar-days"></i><span class="text-gray-600 mb-2 ml-2">Oct 15-18, 2024</span></p>
-                            <p><i class="fas fa-location-dot"></i><span class="ml-2 text-gray-600 mb-2">Geneva, Switzerland</span></p>
-                            <p><i class="fas fa-award"></i><span class="text-gray-600 mb-4 ml-2">24 CME Credits</span></p>
-                            <button class="bendo-button text-gray-900 border-2 mt-4 w-full ">Register Now</button>
-                        </div>
-                    </div>
-                    <div class="bendo-card text-center fade-in">
-                        <img src="event2.jpg" alt="Global Summit" class="w-full h-48 object-cover rounded-t-xl">
-                        <div class="p-6 font-[200] text-left">
-                            <h3 class="text-xl font-bold mb-2">Annual Cardiology Conference</h3>
-                            <p><i class="fas fa-calendar-days"></i><span class="text-gray-600 mb-2 ml-2">Nov 5-7, 2024</span></p>
-                            <p><i class="fas fa-location-dot"></i><span class="ml-2 text-gray-600 mb-2">Boston, MA</span></p>
-                            <p><i class="fas fa-award"></i><span class="text-gray-600 mb-4 ml-2">18 CME Credits</span></p>
-                            <button class="bendo-button text-gray-900 border-2 mt-4 w-full ">Register Now</button>
-                        </div>
-                    </div>
-                    <div class="relative bendo-card text-center fade-in">
-                        <img src="event3.jpg" alt="Oncology Summit" class="w-full h-48 object-cover rounded-t-xl">
-                    <span class="absolute top-4 right-4 inline-block bg-[#6BF771] font-[300] text-sm text-gray-900 px-2 py-1 rounded-full mb-2">Virtual</span>
-                        <div class="p-6 font-[200] text-left">
-                            <h3 class="text-xl font-bold mb-2">Innovation in Oncology Summit</h3>
-                            <p><i class="fas fa-calendar-days"></i><span class="text-gray-600 mb-2 ml-2">Dec 1-3, 2024</span></p>
-                            <p><i class="fas fa-location-dot"></i><span class="ml-2 text-gray-600 mb-2">Virtual</span></p>
-                            <p><i class="fas fa-award"></i><span class="text-gray-600 mb-4 ml-2">15 CME Credits</span></p>
-                            <button class="bendo-button text-gray-900 border-2 mt-4 w-full">Register Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
-                        View Full Calendar
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- CME Programs & Forum -->
-        <section id="cme" class="py-20 relative z-20">
-            <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-6 text-white text-center">CME Programs</h2>
-            <div class="container mx-auto px-4 flex flex-col lg:flex-row gap-12 mt-20">
-                <div class="lg:w-1/2 ">
-                    <div class="space-y-4">
-                        <div class="bendo-card p-4 text-left fade-in">
-                            <h3 class="text-lg font-bold mb-2">Advanced Cardiac Life Support (ACLS)</h3>
-                            <span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded-full mb-2">8 CME Credits</span>
-                            <p class="text-gray-600 text-sm mb-2 font-[300]">Virtual</p>
-                        </div>
-                        <div class="bendo-card p-4 text-left fade-in">
-                            <h3 class="text-lg font-bold mb-2">Pediatric Emergency Medicine Update</h3>
-                            <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded-full mb-2">12 CME Credits</span>
-                            <p class="text-gray-600 text-sm mb-2 font-[300]">On-demand</p>
-                        </div>
-                        <div class="bendo-card p-4 text-left fade-in">
-                            <h3 class="text-lg font-bold mb-2">Innovations in Robotic Surgery</h3>
-                            <span class="inline-block bg-purple-100 text-purple-800 text-sm font-semibold px-2 py-1 rounded-full mb-2">6 CME Credits</span>
-                            <p class="text-gray-600 text-sm mb-2 font-[300]">Virtual</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Active Forum Discussions</h2>
-                    <div class="space-y-4 bendo-card">
-                        <div class="p-4 text-left fade-in">
-                            <h3 class="text-lg font-bold mb-2">Challenging Case: Atypical Presentation of Myocarditis</h3>
-                            <div class="flex items-center text-gray-600 text-sm mb-2">
-                                <span class="mr-4 font-[300]"><i class="fas fa-users mr-1"></i> 42 Participants</span>
-                                <span class="font-[300]"><i class="fas fa-clock mr-1"></i> Latest by Dr. Eva Rostova</span>
+                            <div class="p-6 font-[200] text-left">
+                                <h3 class="text-xl font-bold mb-2">Innovation in Oncology Summit</h3>
+                                <p><i class="fas fa-calendar-days"></i><span class="text-gray-600 mb-2 ml-2">Dec 1-3, 2024</span></p>
+                                <p><i class="fas fa-location-dot"></i><span class="ml-2 text-gray-600 mb-2">Virtual</span></p>
+                                <p><i class="fas fa-award"></i><span class="text-gray-600 mb-4 ml-2">15 CME Credits</span></p>
+                                <button class="bendo-button text-gray-900 border-2 mt-4 w-full">Register Now</button>
                             </div>
-                            <p class="text-gray-500 italic text-sm font-[300]">"Consider viral PCR on endomyocardial biopsy for definitive diagnosis."</p>
                         </div>
-                        <div class="p-4 pt-0 text-left fade-in">
-                            <div class="flex items-center mb-2 font-[300]">
-                                <img src="dr-kenji-tanaka.jpg" alt="Dr. Kenji Tanaka" class="w-10 h-10 rounded-full mr-3">
-                                <div>
-                                    <h3 class="text-lg font-bold">Dr. Kenji Tanaka</h3>
-                                    <p class="text-gray-600 text-sm font-[300]">Cardiology Expert</p>
+                    </div>
+                    <div class="text-center">
+                        <button class="bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
+                            View Full Calendar
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CME Programs & Forum -->
+            <section id="cme" class="overflow-hidden py-20 relative z-20">
+                <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-6 text-white text-center">CME Programs</h2>
+                <div class="container mx-auto px-4 flex flex-col lg:flex-row gap-12 mt-20">
+                    <div class="lg:w-1/2 ">
+                        <div class="space-y-4">
+                            <div class="bendo-card p-4 text-left fade-in">
+                                <h3 class="text-lg font-bold mb-2">Advanced Cardiac Life Support (ACLS)</h3>
+                                <span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded-full mb-2">8 CME Credits</span>
+                                <p class="text-gray-600 text-sm mb-2 font-[300]">Virtual</p>
+                            </div>
+                            <div class="bendo-card p-4 text-left fade-in">
+                                <h3 class="text-lg font-bold mb-2">Pediatric Emergency Medicine Update</h3>
+                                <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded-full mb-2">12 CME Credits</span>
+                                <p class="text-gray-600 text-sm mb-2 font-[300]">On-demand</p>
+                            </div>
+                            <div class="bendo-card p-4 text-left fade-in">
+                                <h3 class="text-lg font-bold mb-2">Innovations in Robotic Surgery</h3>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-sm font-semibold px-2 py-1 rounded-full mb-2">6 CME Credits</span>
+                                <p class="text-gray-600 text-sm mb-2 font-[300]">Virtual</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Active Forum Discussions</h2>
+                        <div class="space-y-4 bendo-card">
+                            <div class="p-4 text-left fade-in">
+                                <h3 class="text-lg font-bold mb-2">Challenging Case: Atypical Presentation of Myocarditis</h3>
+                                <div class="flex items-center text-gray-600 text-sm mb-2">
+                                    <span class="mr-4 font-[300]"><i class="fas fa-users mr-1"></i> 42 Participants</span>
+                                    <span class="font-[300]"><i class="fas fa-clock mr-1"></i> Latest by Dr. Eva Rostova</span>
+                                </div>
+                                <p class="text-gray-500 italic text-sm font-[300]">"Consider viral PCR on endomyocardial biopsy for definitive diagnosis."</p>
+                            </div>
+                            <div class="p-4 pt-0 text-left fade-in">
+                                <div class="flex items-center mb-2 font-[300]">
+                                    <img src="profile.jpg" alt="Dr. Kenji Tanaka" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h3 class="text-lg font-bold">Dr. Kenji Tanaka</h3>
+                                        <p class="text-gray-600 text-sm font-[300]">Cardiology Expert</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <button class="bg-white/20 mt-10 relative z-20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
+                            View All
+                        </button>
                     </div>
-                    <button class="bg-white/20 mt-10 relative z-20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
-                        View All
-                    </button>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- News & Updates -->
-        <section id="news" class="pt-20 pb-20 relative z-20 bg-gradient-to-b from-white/0 to-black overflow-hidden" >
-            <div class="container mx-auto px-4">
-                <div class="text-center py-20">
-                    <h2 class="relative z-20  text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">News & Updates</h2>
-                    <p class="relative z-20 text-white/90 text-base md:text-lg font-[200]">Stay updated with the latest in healthcare innovation.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-20 ">
-                    <div class="bendo-card p-4 text-left fade-in">
-                        <img src="aiPowered.jpg" alt="AI Diagnostic Tool" class="w-full h-32 object-cover rounded-lg mb-2">
-                        <div class="mb-2">
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">Innovation</span>
+            <!-- News & Updates -->
+            <section id="news" class="pt-20 pb-20 relative z-20 bg-gradient-to-b from-white/0 to-black overflow-hidden" >
+                <div class="container mx-auto px-4">
+                    <div class="text-center py-20">
+                        <h2 class="relative z-20  text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">News & Updates</h2>
+                        <p class="relative z-20 text-white/90 text-base md:text-lg font-[200]">Stay updated with the latest in healthcare innovation.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-20 ">
+                        <div class="bendo-card p-4 text-left fade-in">
+                            <img src="aiPowered.jpg" alt="AI Diagnostic Tool" class="w-full h-32 object-cover rounded-lg mb-2">
+                            <div class="mb-2">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">Innovation</span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">AI-Powered Diagnostic Tool Unveiled</h3>
+                            <p class="text-gray-600 text-sm mb-2 font-[300]">CFIMH introduces a cutting-edge AI tool to enhance diagnostic accuracy.</p>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-500 font-[200]">Oct 01, 2025</span>
+                                <button class="bendo-button text-blue-600 hover:text-blue-800">Read More</button>
+                            </div>
                         </div>
-                        <h3 class="text-lg font-bold mb-2">AI-Powered Diagnostic Tool Unveiled</h3>
-                        <p class="text-gray-600 text-sm mb-2 font-[300]">CFIMH introduces a cutting-edge AI tool to enhance diagnostic accuracy.</p>
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-gray-500 font-[200]">Oct 01, 2025</span>
-                            <button class="bendo-button text-blue-600 hover:text-blue-800">Read More</button>
+                        <div class="bendo-card p-4 text-left fade-in">
+                            <img src="who.jpg" alt="WHO Partnership" class="w-full h-32 object-cover rounded-lg mb-2">
+                            <div class="mb-2">
+                                <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Partnership</span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">New Collaboration with WHO</h3>
+                            <p class="text-gray-600 text-sm mb-2 font-[300]">A strategic alliance to improve global health outcomes.</p>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-500 font-[200]">Sep 28, 2025</span>
+                                <button class="bendo-button text-blue-600 hover:text-blue-800">Read More</button>
+                            </div>
+                        </div>
+                        <div class="bendo-card p-4 text-left fade-in">
+                            <img src="enrollment.jpg" alt="CME Record" class="w-full h-32 object-cover rounded-lg mb-2">
+                            <div class="mb-2">
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">Achievement</span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Record CME Enrollment</h3>
+                            <p class="text-gray-600 text-sm mb-2 font-[300]">Over 60,000 healthcare pros enrolled in 2025 programs.</p>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-500 font-[200]">Sep 25, 2025</span>
+                                <button class="bendo-button text-blue-600 hover:text-blue-800">Read More</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="bendo-card p-4 text-left fade-in">
-                        <img src="who.jpg" alt="WHO Partnership" class="w-full h-32 object-cover rounded-lg mb-2">
-                        <div class="mb-2">
-                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Partnership</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2">New Collaboration with WHO</h3>
-                        <p class="text-gray-600 text-sm mb-2 font-[300]">A strategic alliance to improve global health outcomes.</p>
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-gray-500 font-[200]">Sep 28, 2025</span>
-                            <button class="bendo-button text-blue-600 hover:text-blue-800">Read More</button>
-                        </div>
+                    <div class="text-center">
+                        <button class="bg-white/20 mt-20 relative z-20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
+                            <i class="fas fa-newspaper mr-2"></i>View All News
+                        </button>
                     </div>
-                    <div class="bendo-card p-4 text-left fade-in">
-                        <img src="enrollment.jpg" alt="CME Record" class="w-full h-32 object-cover rounded-lg mb-2">
-                        <div class="mb-2">
-                            <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded-full">Achievement</span>
-                        </div>
-                        <h3 class="text-lg font-bold mb-2">Record CME Enrollment</h3>
-                        <p class="text-gray-600 text-sm mb-2 font-[300]">Over 60,000 healthcare pros enrolled in 2025 programs.</p>
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-gray-500 font-[200]">Sep 25, 2025</span>
-                            <button class="bendo-button text-blue-600 hover:text-blue-800">Read More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="bg-white/20 mt-20 relative z-20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30">
-                        <i class="fas fa-newspaper mr-2"></i>View All News
-                    </button>
-                </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
 
+        </div>
     </div>
-
-</div>
 
 
     <!-- Professional Directory -->
@@ -754,7 +1156,7 @@
 
 
     <!-- Awards & Recognition -->
-    <section id="awards" class="py-20 relative bg-black">
+    <section id="awards" class="overflow-hidden py-20 relative bg-black">
         <!-- <div class="m-4 absolute inset-0 z-10 bg-white/20 rounded-md"></div>  -->
         <div class="award-bg-overlay mx-6 absolute inset-0 z-10 rounded-2xl "></div> 
         <div class="mx-6 absolute inset-0 z-10 bg-black/30 backdrop-blur-2xl rounded-2xl border border-white/20"></div>
@@ -763,7 +1165,7 @@
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white Section-heading">Awards & Recognition</h2>
                 <p class="text-white/90 text-base md:text-lg font-[200]">Celebrating excellence in medical education and research</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-32 z-10 relative">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-6 z-10 relative">
                 <div class="bendo-card p-8 text-center fade-in">
                     <div class="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-medal text-yellow-600 text-3xl"></i>
@@ -893,15 +1295,15 @@
     </section> -->
 
     <!-- Resources & Services -->
-    <section id="resources" class="resource-overlay relative pt-20 bg-gradient-to-r from-blue-800/90 to-[black]">
+    <section id="resources" class="overflow-hidden resource-overlay mx-auto relative pt-20 bg-gradient-to-r from-blue-800/90 to-[black]">
         <div class="absolute inset-0 z-20 bg-gradient-to-l from-black/80 to-black"></div> 
         <div class="text-center mb-32 relative z-20">
             <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Resources & Services</h2>
             <p class="text-white/90 max-w-2xl mx-auto text-base md:text-lg font-[200]">A suite of powerful tools and services to support your professional journey.</p>
         </div>
-        <div class="container mx-auto flex px-4">
-            <div class="z-20 w-1/2 grid grid-cols-1 sm:grid-cols-2 lg:max-h-96 lg:grid-cols-2 gap-8 mx-44">
-                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl">
+        <div class="container flex flex-col  lg:flex-row align-center justify-center mx-auto px-4 pb-20 gap-32 overflow-hidden">
+            <div class="z-20 w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl flex flex-col align-center justify-center">
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-book-medical text-blue-600 text-3xl"></i>
                     </div>
@@ -909,7 +1311,7 @@
                     <p class="text-white/90 mb-4 text-sm">180+ Evidence-based protocols updated regularly</p>
                     <a href="#guidelines" class="font-[200] text-[#6BF771]  hover:text-[#6BF771]/80">Access Guidelines →</a>
                 </div>
-                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl">
+                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl flex flex-col align-center justify-center">
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-balance-scale text-purple-600 text-3xl"></i>
                     </div>
@@ -917,7 +1319,7 @@
                     <p class="text-white/90 mb-4 text-sm">Board-certified bioethicists available round-the-clock</p>
                     <a href="#" class="font-[200] text-[#6BF771]  hover:text-[#6BF771]/80">Request Consultation →</a>
                 </div>
-                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl">
+                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl flex flex-col align-center justify-center">
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-microscope text-green-600 text-3xl"></i>
                     </div>
@@ -925,7 +1327,7 @@
                     <p class="text-white/90 mb-4 text-sm">Join multi-center clinical research studies</p>
                     <a href="#research" class="font-[200] text-[#6BF771]  hover:text-[#6BF771]/80">View Opportunities →</a>
                 </div>
-                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl">
+                <div class="bg-white/10 p-6 text-center fade-in rounded-3xl flex flex-col align-center justify-center">
                     <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-user-check text-orange-600 text-3xl"></i>
                     </div>
@@ -935,25 +1337,26 @@
                 </div>
             </div>
 
-            <div class="w-2/5 z-20">
-                <img src="awards-section.png" alt="">
+            <div class="w-96 mx-auto lg:mx-0 lg:w-1/3 z-20 relative">
+                <div class="absolute -bottom-0 -left-2 w-full h-32 bg-[#6BF771]/90"></div>
+                <img src="awards-section.png" alt="" class="relative bottom-0 w-full h-full">
             </div>
         </div>
     </section>
 
     
     <!-- Testimonials & Success Stories -->
-    <section id="testimonials" class="py-20 bg-white/10">
+    <section id="testimonials" class="py-20 bg-white/10 overflow-hidden ">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Testimonials & Success Stories</h2>
                 <p class="text-white/90 text-base md:text-lg font-[200]">Hear from our community of healthcare leaders.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mx-32 mb-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mb-24">
                 <div class="bendo-card p-6 text-left fade-in">
                     <img src="quotation.png" class="w-20">
                     <div class="flex">
-                        <img src="dr-maria-rodriguez.jpg" alt="Dr. Maria Rodriguez" class="w-16 h-16 rounded-full mb-4">
+                        <img src="man-testimonial.jpg" alt="Dr. Maria Rodriguez" class="w-16 h-16 rounded-full mb-4 object-cover">
                         <div class="flex-col align-center">
                             <h3 class="text-lg font-bold mb-1">Dr. Maria Rodriguez</h3>
                             <p class="text-gray-600 text-sm mb-2 font-[300]">Cardiologist, Mayo Clinic</p>
@@ -968,7 +1371,7 @@
                 <div class="bendo-card p-6 text-left fade-in">
                     <img src="quotation.png" class="w-20">
                     <div class="flex">
-                        <img src="dr-david-kim.jpg" alt="Dr. David Kim" class="w-16 h-16 rounded-full mb-4">
+                        <img src="female-testimonial.jpg" alt="Dr. David Kim" class="w-16 h-16 rounded-full mb-4 object-cover">
                         <div class="flex-col align-center">
                             <h3 class="text-lg font-bold mb-1">Dr. David Kim</h3>
                             <p class="text-gray-600 text-sm mb-2 font-[300]">Medical Ethics Expert, Johns Hopkins</p>
@@ -982,7 +1385,7 @@
             </div>
             <div class="text-center">
                 <h3 class="text-2xl font-bold mb-14 text-white">Impact at a Glance</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 mx-40">
+                <div class="grid grid-cols-2 md:grid-cols-4 max-w-8xl">
                     <div class="p-4 text-center fade-in">
                         <div class="bg-blue-600 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-2">
                             <i class="fas fa-users text-3xl"></i>
@@ -1017,15 +1420,15 @@
     </section>
 
     <!-- Membership -->
-    <section id="membership" class="py-20 relative rounded">
-        <div class="absolute bg-gradient-to-b from-transparent to-black top-0 left-0 right-0 bottom-0 z-10 "></div>
+    <section id="membership" class="py-20 relative rounded overflow-hidden ">
+        <div class="absolute bg-gradient-to-b from-transparent to-[#040811] top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="absolute backdrop-blur-2xl bg-black/0 top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="container mx-auto px-4 relative z-20">
             <div class="text-center mb-12">
                 <h2 class="text-4xl md:text-5xl Section-heading font-bold mb-4 text-white">Professional Membership Options</h2>
                 <p class="text-white/90 max-w-2xl mx-auto text-base md:text-lg font-[200]">Join the global community advancing medical excellence through collaboration and research</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-36">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bendo-card p-8 relative fade-in">
                     <div class="text-center mb-6">
                         <h3 class="text-2xl font-bold mb-2">Resident/Fellow</h3>
@@ -1056,7 +1459,7 @@
                 </div>
                 <div class="bendo-card p-8 fade-in">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">Department/Institution</h3>
+                        <h3 class="text-2xl font-bold mb-2">Department/ <br class="block sm:hidden"> Institution</h3>
                         <div class="text-3xl font-bold text-blue-600">$1,200<span class="text-lg text-gray-500">/year</span></div>
                     </div>
                     <ul class="space-y-3 mb-8 font-[200]">
@@ -1072,16 +1475,16 @@
     </section>
 
     <!-- CTA -->
-    <section id="cta" class="py-20 min-h-[40vh] bg-black relative overflow-hidden" >
-        <div class="relative z-20 container mx-auto px-4 py-16 bg-gradient-to-r from-white/50 to-white rounded-2xl">
+    <section id="cta" class="py-20 min-h-[40vh] bg-[#040811] relative overflow-hidden" >
+        <div class="relative z-20 container mx-auto px-4 py-16 bg-gradient-to-r from-white/50 to-white rounded-lg">
             <div id="cta-deep" class="absolute bg-gradient-to-r from-blue-900/80 to-white/40 top-0 left-0 right-0 bottom-0 z-10 "></div>
-            <div class="p-12 text-center relative z-20 fade-in">
+            <div class="text-center relative z-20 fade-in">
                 <div class="relative z-20">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white relative z-20">Join the Global Community Advancing Medical Excellence</h2>
-                    <p class="text-white/90 mb-8 max-w-2xl mx-auto text-base md:text-lg font-[300] relative z-20">Access cutting-edge research, earn CME credits, collaborate with leading medical minds worldwide, and shape the future of healthcare.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black relative z-20">Join the Global Community Advancing Medical Excellence</h2>
+                    <p class="text-gray-900 mb-8 max-w-2xl mx-auto text-base md:text-lg font-[400] relative z-20">Access cutting-edge research, earn CME credits, collaborate with leading medical minds worldwide, and shape the future of healthcare.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20">
-                        <button class="bendo-button bg-white text-blue-600 hover:bg-gray-100"><i class="fas fa-user-plus mr-2"></i> Apply for Membership</button>
-                        <button class="bendo-button bg-blue-800 text-white hover:bg-blue-900"><i class="fas fa-calendar mr-2"></i> Schedule Information Session</button>
+                        <button class="bg-white/20 backdrop-blur text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white/30 transition border border-white/30"><i class="fas fa-user-plus mr-2"></i> Apply for Membership</button>
+                        <button class="bg-blue-700/80 backdrop-blur text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-white/40 hover:bg-blue-700 font-semibold transition"><i class="fas fa-calendar mr-2"></i> Schedule Information Session</button>
                     </div>
                 </div>
             </div>
@@ -1090,7 +1493,7 @@
 
 
     <!-- Footer -->
-    <footer id="footer" class="mx-2 my-8 rounded-2xl gradient-bg bg-black h-[90vh] py-12 relative overflow-hidden">
+    <footer id="footer" class="mx-2 my-8 rounded-2xl gradient-bg bg-black h-auto lg:h-[90vh] py-12 relative overflow-hidden">
         <div class="absolute bg-black/10 top-0 left-0 right-0 bottom-0 z-10"></div>
         <div class="absolute bg-blue-900/0 backdrop-blur top-0 left-0 right-0 bottom-0 z-10 "></div>
         <div class="overlay-hero absolute top-0 left-0 right-0 bottom-0 z-10">
@@ -1098,15 +1501,15 @@
                 <source src="footer1.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="text-gray-900 mt-10 mb-20 mx-32 relative z-10 flex-col justify-center align-center">
-            <h1 class="text-4xl lg:text-6xl text-center font-bold mb-10 text-white">Join Our Newsletter & <br> Stay Up to Date</h1>
-            <div class="flex w-1/2 mx-auto">
-                <input type="email" placeholder="Enter your email address" class="flex-1 p-4 border border-gray-300 rounded-l-lg focus:ring-0 text-black">
-                <button class="bg-[#6BF771]/70 backdrop-blur text-white px-8 py-4  font-semibold transition rounded-r-lg">Subscribe</button>
+        <div class="text-gray-900 mt-10 mb-20 relative z-10 flex-col justify-center align-center">
+            <h1 class="text-2xl md:text-4xl lg:text-6xl text-center font-bold mb-10 text-white">Join Our Newsletter & <br> Stay Up to Date</h1>
+            <div class="flex flex-col mx-6 max-w-2xl sm:mx-auto sm:flex-row align-center justify-center">
+                <input type="email" placeholder="Enter your email address" class="flex-1 p-4 border border-gray-300 rounded-lg sm:rounded-l-lg focus:ring-0 text-black">
+                <button class="bg-[#6BF771]/70 backdrop-blur text-white px-8 py-4  font-semibold transition rounded-lg sm:rounded-r-lg">Subscribe</button>
             </div>
         </div>
         <div class="container mx-auto px-4 relative z-10 border border-white/20 bg-black/30 px-8 py-6 rounded-2xl">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8 pt-20">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 sm:gap-8 mb-8 pt-4 sm:pt-20">
                 <div>
                     <h4 class="text-xl font-bold mb-4 text-white">Quick Links</h4>
                     <ul class="space-y-2 text-gray-100 font-[300]">
@@ -1170,5 +1573,53 @@
     </footer>
   
     <!-- <script src="medical.js"></script> -->
+     
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuButton.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('show');
+            mobileMenu.classList.toggle('show');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenuButton.classList.remove('active');
+            mobileMenuOverlay.classList.remove('show');
+            mobileMenu.classList.remove('show');
+        });
+
+        mobileMenuOverlay.addEventListener('click', () => {
+            mobileMenuButton.classList.remove('active');
+            mobileMenuOverlay.classList.remove('show');
+            mobileMenu.classList.remove('show');
+        });
+
+        // Mobile Accordion Toggle
+        const accordionTriggers = document.querySelectorAll('.mobile-accordion-trigger');
+        accordionTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const accordionItem = trigger.parentElement;
+                const accordionContent = trigger.nextElementSibling;
+                const isActive = accordionItem.classList.contains('active');
+
+                // Close all other accordions
+                document.querySelectorAll('.mobile-accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.mobile-accordion-content').style.maxHeight = '0';
+                });
+
+                // Toggle the clicked accordion
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
