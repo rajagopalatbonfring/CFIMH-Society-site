@@ -1,0 +1,612 @@
+    <nav class="cfimh-nav bg-white shadow-xl fixed rounded-full top-8 left-4 right-4 md:left-8 md:right-8 lg:mx-36 px-4 md:px-6 h-16 md:h-20 z-50 flex items-center justify-between">
+        <div class="flex align-center justify-center">
+            <div class="lg:hidden flex align-center justify-center">
+                <button id="mobile-menu-button" class="mobile-menu-button p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                    <div class="hamburger-lines">
+                        <span class="line line1 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
+                        <span class="line line2 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
+                        <span class="line line3 block w-6 h-0.5 bg-current transition-all duration-300"></span>
+                    </div>
+                </button>
+            </div>    
+        
+            <div class="flex items-center">
+                <div class="text-[#75adfc] px-2 md:px-3 py-2 md:py-3 rounded-full font-semibold text-xl md:text-3xl flex items-center justify-center">
+                    <i class="fas fa-stethoscope mr-2"></i>
+                    <span class="hidden sm:inline">CF</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:flex space-x-6 xl:space-x-8 items-center text-sm">
+            
+            <a href="#hero" class="nav-link text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+                HOME
+            </a>
+            
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    ABOUT
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#mission" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-bullseye mr-2 text-[#6BF771]"></i>Mission & Vision
+                        </a>
+                        <a href="#leadership" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-users mr-2 text-[#6BF771]"></i>Leadership Council
+                        </a>
+                        <a href="#advisory" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-user-tie mr-2 text-[#6BF771]"></i>Advisory Board
+                        </a>
+                        <a href="#ethics" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-balance-scale mr-2 text-[#6BF771]"></i>Ethics Committee
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    RESEARCH
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#clinical-studies" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-microscope mr-2 text-[#6BF771]"></i>Clinical Studies
+                        </a>
+                        <a href="#research-papers" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-file-alt mr-2 text-[#6BF771]"></i>Research Papers
+                        </a>
+                        <a href="#peer-review" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-search mr-2 text-[#6BF771]"></i>Peer Review
+                        </a>
+                        <a href="#publications" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-book mr-2 text-[#6BF771]"></i>Publications
+                        </a>
+                        <a href="#methodology" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-cogs mr-2 text-[#6BF771]"></i>Methodology Guidelines
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    CME
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#cme-programs" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-graduation-cap mr-2 text-[#6BF771]"></i>CME Programs
+                        </a>
+                        <a href="#certification" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-certificate mr-2 text-[#6BF771]"></i>Certification Courses
+                        </a>
+                        <a href="#webinars" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-video mr-2 text-[#6BF771]"></i>Webinar Series
+                        </a>
+                        <a href="#skills-training" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-tools mr-2 text-[#6BF771]"></i>Skills Training
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#events" class="nav-link text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+                EVENTS
+            </a>
+
+            <div class="relative group">
+                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                    MORE
+                    <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+                </button>
+                <div class="dropdown-menu absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                    <div class="py-2 font-[400]">
+                        <a href="#resources" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-folder mr-2 text-[#6BF771]"></i>Resources
+                        </a>
+                        <a href="#membership" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-id-card mr-2 text-[#6BF771]"></i>Membership
+                        </a>
+                        <a href="#ethics-consultation" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-phone mr-2 text-[#6BF771]"></i>Ethics Consultation
+                        </a>
+                        <a href="#guidelines" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-clipboard-list mr-2 text-[#6BF771]"></i>Clinical Guidelines
+                        </a>
+                        <a href="#contact" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            <i class="fas fa-envelope mr-2 text-[#6BF771]"></i>Contact
+                        </a>
+                        <a href="#forums" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
+                            Forum
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-4">
+            <button class="bg-blue-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 text-sm">
+                Submit Research
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden opacity-0 invisible transition-all duration-300"></div>
+
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-sm bg-white shadow-2xl z-50 lg:hidden transform translate-x-full transition-transform duration-300 overflow-y-auto">
+        <!-- Mobile Menu Header -->
+        <div class="mobile-menu-header p-6 border-b border-gray-200">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-[#75adfc] text-2xl font-bold">
+                        <i class="fas fa-stethoscope mr-2"></i>
+                        CF
+                    </div>
+                </div>
+                <button id="mobile-menu-close" class="p-2 rounded-lg text-gray-500 hover:bg-white hover:text-gray-700 transition-colors duration-200">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Items -->
+        <div class="mobile-menu-content p-4">
+            <!-- Mobile CTA Button -->
+            <div class="mb-6">
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+                    Submit Research
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Items -->
+            <div class="space-y-2">
+                <!-- Home -->
+                <a href="#hero" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-home mr-3 text-blue-400 w-5"></i>Home
+                </a>
+
+                <!-- About Accordion -->
+                <div class="mobile-accordion-item">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                        <span><i class="fas fa-info-circle mr-3 text-blue-400 w-5"></i>About</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="pl-12 pr-4 py-2 space-y-1">
+                            <a href="#mission" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Mission & Vision</a>
+                            <a href="#leadership" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Leadership Council</a>
+                            <a href="#advisory" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Advisory Board</a>
+                            <a href="#ethics" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Ethics Committee</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Accordion -->
+                <div class="mobile-accordion-item">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                        <span><i class="fas fa-microscope mr-3 text-blue-400 w-5"></i>Research</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="pl-12 pr-4 py-2 space-y-1">
+                            <a href="#clinical-studies" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Clinical Studies</a>
+                            <a href="#research-papers" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Research Papers</a>
+                            <a href="#peer-review" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Peer Review</a>
+                            <a href="#publications" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Publications</a>
+                            <a href="#methodology" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Methodology Guidelines</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CME & Education Accordion -->
+                <div class="mobile-accordion-item">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                        <span><i class="fas fa-graduation-cap mr-3 text-blue-400 w-5"></i>CME & Education</span>
+                        <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                    </button>
+                    <div class="mobile-accordion-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="pl-12 pr-4 py-2 space-y-1">
+                            <a href="#cme-programs" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">CME Programs</a>
+                            <a href="#certification" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Certification Courses</a>
+                            <a href="#webinars" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Webinar Series</a>
+                            <a href="#skills-training" class="block py-2 px-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200">Skills Training</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forum -->
+                <a href="#forums" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-comments mr-3 text-blue-400 w-5"></i>Forum
+                </a>
+
+                <!-- Events -->
+                <a href="#events" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-calendar mr-3 text-blue-400 w-5"></i>Events
+                </a>
+
+                <!-- Resources -->
+                <a href="#resources" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-folder mr-3 text-blue-400 w-5"></i>Resources
+                </a>
+
+                <!-- Membership -->
+                <a href="#membership" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-id-card mr-3 text-blue-400 w-5"></i>Membership
+                </a>
+
+                <!-- Contact -->
+                <a href="#contact" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <i class="fas fa-envelope mr-3 text-blue-400 w-5"></i>Contact
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+        body {
+            font-family: "Sora", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            background: #040811;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            position: relative;
+        }
+
+        .overlay-hero {
+            opacity: .7;
+        }
+
+        .overlay-hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .bg-img-overlay {
+            background-image: url("8989.jpg");
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .bg-img-overlay2 {
+            background-image: url("element3.png");
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+        }
+
+        .award-bg-overlay {
+            background-image: url("hexagonal_network.jpg");
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .greenclr {
+            color: #6BF771;
+            border: #6BF771;
+            background-color: #6BF771;
+        }
+
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("hero3.png");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+        #cta-deep {
+            background-image: url("nobg-cta.png");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: cover;
+        }
+
+        #membership {
+            background-image: url("heartbeat.jpg");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+        }
+
+        .footer-gradient-bg::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("hexagonal_network.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+
+        .Section-heading::after {
+            content: '';
+            display: block;
+            width: 100px;
+            padding-top: 8px;
+            height: 3px;
+            background: #6BF771;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+
+        .bendo-card {
+            background: rgb(255, 255, 255);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bendo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .bendo-gradient {
+            background: linear-gradient(135deg, #1567e6, #a855f7);
+        }
+
+        .bendo-button {
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .bendo-button:hover {
+            transform: scale(1.05);
+        }
+
+        .cfimh-nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+        }
+
+        .group:hover .group-hover\:visible {
+            visibility: visible;
+        }
+
+        .group:hover .group-hover\:rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            min-width: 240px;
+        }
+
+        .dropdown-item {
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu.show {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-button.active .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-button.active .line2 {
+            opacity: 0;
+        }
+
+        .mobile-menu-button.active .line3 {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        .mobile-accordion-item.active .mobile-accordion-trigger i {
+            transform: rotate(180deg);
+        }
+
+        .mobile-accordion-item.active .mobile-accordion-content {
+            max-height: 500px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .nav-link:focus,
+        .dropdown-item:focus,
+        .mobile-nav-item:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+
+        /* Enhanced Responsive Adjustments */
+        @media (max-width: 1280px) {
+            .cfimh-nav {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            .dropdown-menu {
+                min-width: 200px;
+            }
+
+            .nav-link, .dropdown-item {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .cfimh-nav {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cfimh-nav {
+                margin-left: 0.75rem;
+                margin-right: 0.75rem;
+                height: 3.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .hero button {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .bendo-card {
+                border-radius: 1rem;
+                padding: 1rem;
+            }
+
+            .text-4xl {
+                font-size: 1.5rem;
+            }
+
+            .text-3xl {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .cfimh-nav {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                height: 3rem;
+            }
+
+            .cfimh-nav .text-xl {
+                font-size: 1rem;
+            }
+
+            .mobile-menu {
+                width: 100%;
+                max-width: none;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.8rem;
+            }
+
+            .hero button {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cfimh-nav {
+                padding: 0.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.25rem;
+            }
+
+            .hero p {
+                font-size: 0.75rem;
+            }
+
+            .hero button {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .bendo-card, .bendo-button {
+                transition: none;
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>

@@ -8,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Updated CSS for Text Color and Scale Effect -->
     <style>
+        /* Existing styles remain unchanged */
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
         body {
@@ -52,7 +54,6 @@
             background-position: bottom;
             background-size: cover;
             background-repeat: no-repeat;
-        
         }
 
         .award-bg-overlay {
@@ -219,6 +220,23 @@
             outline-offset: 2px;
         }
 
+        /* Text color and scale effect when scrolled */
+        #main-nav.scrolled .nav-link,
+        #main-nav.scrolled .mobile-menu-button,
+        #main-nav.scrolled .mobile-menu-close,
+        #main-nav.scrolled .mobile-nav-item,
+        #main-nav.scrolled .mobile-accordion-trigger {
+            color: #1F2937; /* Tailwind's text-gray-900 */
+        }
+
+        #main-nav.scrolled .nav-link:hover,
+        #main-nav.scrolled .mobile-menu-button:hover,
+        #main-nav.scrolled .mobile-menu-close:hover,
+        #main-nav.scrolled .mobile-nav-item:hover,
+        #main-nav.scrolled .mobile-accordion-trigger:hover {
+            color: #2563EB; /* Tailwind's text-blue-600 */
+        }
+
         /* Enhanced Responsive Adjustments */
         @media (max-width: 1280px) {
             .cfimh-nav {
@@ -358,43 +376,14 @@
 </head>
 <body >
 
+
+
     <!-- Navigation -->
-    <!-- <nav class="bg-white shadow-xl fixed h-20 rounded-full mx-36 px-6 top-8 left-0 right-0 z-50 flex align-center justify-evenly">
-        <div class="container m-0 p-0">
-            <div class="flex items-center justify-between h-full">
-                <div class="flex items-center justify-between ">
-                    <div class="flex items-center">
-                        <div class="text-[#75adfc] px-3 py-3 rounded-full font-semibold text-3xl flex align-center justify-center">
-                            <i class="fas fa-stethoscope"></i>
-                            CFIMH
-                        </div>
-                    </div>
-                    <div class="hidden md:flex space-x-8 gap-y-4 align-center justify-center  text-sm">
-                        <a href="#hero" class="text-gray-700 hover:text-blue-600 font-semibold">HOME</a>
-                        <a href="#about" class="text-gray-700 hover:text-blue-600 font-semibold">ABOUT US</a>
-                        <a href="#research" class="text-gray-700 hover:text-blue-600 font-semibold">RESEARCH HUB</a>
-                        <a href="#cme" class="text-gray-700 hover:text-blue-600 font-semibold">PROFESSIONAL DEV</a>
-                        <a href="#forums" class="text-gray-700 hover:text-blue-600 font-semibold">FORUM</a>
-                        <a href="#resources" class="text-gray-700 hover:text-blue-600 font-semibold">RESOURCES</a>
-                        <a href="#events" class="text-gray-700 hover:text-blue-600 font-semibold">EVENTS</a>
-                        <a href="#membership" class="text-gray-700 hover:text-blue-600 font-semibold">MEMBERSHIP</a>
-                        <a href="#publications" class="text-gray-700 hover:text-blue-600 font-semibold">PUBLICATIONS</a>
-                        <a href="#footer" class="text-gray-700 hover:text-blue-600 font-semibold">CONTACT</a>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
-                        Submit Research
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav> -->
-    <nav class="cfimh-nav bg-white shadow-xl fixed rounded-full top-8 left-4 right-4 md:left-8 md:right-8 lg:mx-36 px-4 md:px-6 h-16 md:h-20 z-50 flex items-center justify-between">
+    <nav id="main-nav" class="cfimh-nav bg-white/5 shadow-none fixed rounded-full top-8 left-4 right-4 md:left-8 md:right-8 lg:mx-36 px-4 md:px-6 h-16 md:h-20 z-50 flex items-center justify-between transition-all duration-300 scale-100">
         <div class="flex align-center justify-center">
             <!-- Mobile Menu Button -->
             <div class="lg:hidden flex align-center justify-center">
-                <button id="mobile-menu-button" class="mobile-menu-button p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                <button id="mobile-menu-button" class="mobile-menu-button p-2 rounded-lg text-white hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
                     <div class="hamburger-lines">
                         <span class="line line1 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
                         <span class="line line2 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
@@ -405,7 +394,7 @@
         
             <!-- Logo Section -->
             <div class="flex items-center">
-                <div class="text-[#75adfc] px-2 md:px-3 py-2 md:py-3 rounded-full font-semibold text-xl md:text-3xl flex items-center justify-center">
+                <div class="text-white px-2 md:px-3 py-2 md:py-3 rounded-full font-semibold text-xl md:text-3xl flex items-center justify-center">
                     <i class="fas fa-stethoscope mr-2"></i>
                     <span class="hidden sm:inline">CF</span>
                 </div>
@@ -415,29 +404,29 @@
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex space-x-6 xl:space-x-8 items-center text-sm">
             <!-- Home -->
-            <a href="#hero" class="nav-link text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+            <a href="#hero" class="nav-link text-white hover:text-[#6BF771]/90 font-semibold transition-colors duration-200">
                 HOME
             </a>
             
             <!-- About Dropdown -->
             <div class="relative group">
-                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                <button class="nav-link text-white hover:text-[#6BF771]/90 font-semibold flex items-center transition-colors duration-200">
                     ABOUT
                     <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
                 </button>
                 <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
                     <div class="py-2 font-[400]">
                         <a href="#mission" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-bullseye mr-2 text-[#6BF771]"></i>Mission & Vision
+                            <i class="fas fa-bullseye mr-2 text-blue-500"></i>Mission & Vision
                         </a>
                         <a href="#leadership" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-users mr-2 text-[#6BF771]"></i>Leadership Council
+                            <i class="fas fa-users mr-2 text-blue-500"></i>Leadership Council
                         </a>
                         <a href="#advisory" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-user-tie mr-2 text-[#6BF771]"></i>Advisory Board
+                            <i class="fas fa-user-tie mr-2 text-blue-500"></i>Advisory Board
                         </a>
                         <a href="#ethics" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-balance-scale mr-2 text-[#6BF771]"></i>Ethics Committee
+                            <i class="fas fa-balance-scale mr-2 text-blue-500"></i>Ethics Committee
                         </a>
                     </div>
                 </div>
@@ -445,26 +434,26 @@
 
             <!-- Research Dropdown -->
             <div class="relative group">
-                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                <button class="nav-link text-white hover:text-[#6BF771]/90 font-semibold flex items-center transition-colors duration-200">
                     RESEARCH
                     <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
                 </button>
                 <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
                     <div class="py-2 font-[400]">
                         <a href="#clinical-studies" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-microscope mr-2 text-[#6BF771]"></i>Clinical Studies
+                            <i class="fas fa-microscope mr-2 text-blue-500"></i>Clinical Studies
                         </a>
                         <a href="#research-papers" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-file-alt mr-2 text-[#6BF771]"></i>Research Papers
+                            <i class="fas fa-file-alt mr-2 text-blue-500"></i>Research Papers
                         </a>
                         <a href="#peer-review" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-search mr-2 text-[#6BF771]"></i>Peer Review
+                            <i class="fas fa-search mr-2 text-blue-500"></i>Peer Review
                         </a>
                         <a href="#publications" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-book mr-2 text-[#6BF771]"></i>Publications
+                            <i class="fas fa-book mr-2 text-blue-500"></i>Publications
                         </a>
                         <a href="#methodology" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-cogs mr-2 text-[#6BF771]"></i>Methodology Guidelines
+                            <i class="fas fa-cogs mr-2 text-blue-500"></i>Methodology Guidelines
                         </a>
                     </div>
                 </div>
@@ -472,61 +461,58 @@
 
             <!-- CME & Education Dropdown -->
             <div class="relative group">
-                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                <button class="nav-link text-white hover:text-[#6BF771]/90 font-semibold flex items-center transition-colors duration-200">
                     CME
                     <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
                 </button>
                 <div class="dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
                     <div class="py-2 font-[400]">
                         <a href="#cme-programs" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-graduation-cap mr-2 text-[#6BF771]"></i>CME Programs
+                            <i class="fas fa-graduation-cap mr-2 text-blue-500"></i>CME Programs
                         </a>
                         <a href="#certification" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-certificate mr-2 text-[#6BF771]"></i>Certification Courses
+                            <i class="fas fa-certificate mr-2 text-blue-500"></i>Certification Courses
                         </a>
                         <a href="#webinars" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-video mr-2 text-[#6BF771]"></i>Webinar Series
+                            <i class="fas fa-video mr-2 text-blue-500"></i>Webinar Series
                         </a>
                         <a href="#skills-training" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-tools mr-2 text-[#6BF771]"></i>Skills Training
+                            <i class="fas fa-tools mr-2 text-blue-500"></i>Skills Training
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Forum -->
-
-
             <!-- Events -->
-            <a href="#events" class="nav-link text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+            <a href="#events" class="nav-link text-white hover:text-[#6BF771]/90 font-semibold transition-colors duration-200">
                 EVENTS
             </a>
 
             <!-- More Dropdown -->
             <div class="relative group">
-                <button class="nav-link text-gray-700 hover:text-blue-600 font-semibold flex items-center transition-colors duration-200">
+                <button class="nav-link text-white hover:text-[#6BF771]/90 font-semibold flex items-center transition-colors duration-200">
                     MORE
                     <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-200 group-hover:rotate-180"></i>
                 </button>
                 <div class="dropdown-menu absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
                     <div class="py-2 font-[400]">
                         <a href="#resources" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-folder mr-2 text-[#6BF771]"></i>Resources
+                            <i class="fas fa-folder mr-2 text-blue-500"></i>Resources
                         </a>
                         <a href="#membership" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-id-card mr-2 text-[#6BF771]"></i>Membership
+                            <i class="fas fa-id-card mr-2 text-blue-500"></i>Membership
                         </a>
                         <a href="#ethics-consultation" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-phone mr-2 text-[#6BF771]"></i>Ethics Consultation
+                            <i class="fas fa-phone mr-2 text-blue-500"></i>Ethics Consultation
                         </a>
                         <a href="#guidelines" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-clipboard-list mr-2 text-[#6BF771]"></i>Clinical Guidelines
+                            <i class="fas fa-clipboard-list mr-2 text-blue-500"></i>Clinical Guidelines
                         </a>
                         <a href="#contact" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            <i class="fas fa-envelope mr-2 text-[#6BF771]"></i>Contact
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>Contact
                         </a>
                         <a href="#forums" class="dropdown-item block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150">
-                            Forum
+                           <i class="fas fa-comments mr-2 text-blue-500"></i>  Forum
                         </a>
                     </div>
                 </div>
@@ -555,7 +541,7 @@
                         CF
                     </div>
                 </div>
-                <button id="mobile-menu-close" class="p-2 rounded-lg text-gray-500 hover:bg-white hover:text-gray-700 transition-colors duration-200">
+                <button id="mobile-menu-close" class="p-2 rounded-lg text-white hover:bg-white hover:text-gray-900 transition-colors duration-200">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
@@ -573,13 +559,13 @@
             <!-- Mobile Navigation Items -->
             <div class="space-y-2">
                 <!-- Home -->
-                <a href="#hero" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                <a href="#hero" class="mobile-nav-item block py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                     <i class="fas fa-home mr-3 text-blue-400 w-5"></i>Home
                 </a>
 
                 <!-- About Accordion -->
                 <div class="mobile-accordion-item">
-                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                         <span><i class="fas fa-info-circle mr-3 text-blue-400 w-5"></i>About</span>
                         <i class="fas fa-chevron-down transition-transform duration-200"></i>
                     </button>
@@ -595,7 +581,7 @@
 
                 <!-- Research Accordion -->
                 <div class="mobile-accordion-item">
-                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                         <span><i class="fas fa-microscope mr-3 text-blue-400 w-5"></i>Research</span>
                         <i class="fas fa-chevron-down transition-transform duration-200"></i>
                     </button>
@@ -612,7 +598,7 @@
 
                 <!-- CME & Education Accordion -->
                 <div class="mobile-accordion-item">
-                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                         <span><i class="fas fa-graduation-cap mr-3 text-blue-400 w-5"></i>CME & Education</span>
                         <i class="fas fa-chevron-down transition-transform duration-200"></i>
                     </button>
@@ -627,32 +613,35 @@
                 </div>
 
                 <!-- Forum -->
-                <a href="#forums" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                <a href="#forums" class="mobile-nav-item block py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                     <i class="fas fa-comments mr-3 text-blue-400 w-5"></i>Forum
                 </a>
 
                 <!-- Events -->
-                <a href="#events" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                <a href="#events" class="mobile-nav-item block py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                     <i class="fas fa-calendar mr-3 text-blue-400 w-5"></i>Events
                 </a>
 
                 <!-- Resources -->
-                <a href="#resources" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                <a href="#resources" class="mobile-nav-item block py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                     <i class="fas fa-folder mr-3 text-blue-400 w-5"></i>Resources
                 </a>
 
                 <!-- Membership -->
-                <a href="#membership" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                <a href="#membership" class="mobile-nav-item block py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                     <i class="fas fa-id-card mr-3 text-blue-400 w-5"></i>Membership
                 </a>
 
                 <!-- Contact -->
-                <a href="#contact" class="mobile-nav-item block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
+                <a href="#contact" class="mobile-nav-item block py-3 px-4 text-white hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200 font-medium">
                     <i class="fas fa-envelope mr-3 text-blue-400 w-5"></i>Contact
                 </a>
             </div>
         </div>
     </div>
+
+
+
 
     <!-- Hero Section -->
     <section id="hero" class="gradient-bg h-[90vh] pt-28 sm:pt-10 md:pt-0 sm:h-[75vh] md:h-[85vh]  lg:h-[95vh] mx-2 my-4 rounded-2xl relative overflow-hidden flex items-center justify-center">
@@ -1572,7 +1561,7 @@
         </div>
     </footer>
   
-    <!-- <script src="medical.js"></script> -->
+    <script src="medical.js"></script>
      
     <script>
         // Mobile Menu Toggle
@@ -1617,6 +1606,21 @@
                 if (!isActive) {
                     accordionItem.classList.add('active');
                     accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('main-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.classList.remove('bg-transparent', 'shadow-none', 'scale-100');
+                    nav.classList.add('bg-white/80', 'backdrop-blur-lg', 'shadow-lg', 'scale-95', 'scrolled');
+                } else {
+                    nav.classList.remove('bg-white/80', 'backdrop-blur-lg', 'shadow-lg', 'scale-95', 'scrolled');
+                    nav.classList.add('bg-transparent', 'shadow-none', 'scale-100');
                 }
             });
         });
