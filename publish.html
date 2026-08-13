@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Journals & Publications</title>
+    <title>CFIMH - Journals & Publications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -15,104 +18,202 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f8f9fc;
-            color: #29294d;
+            font-family: "Sora", sans-serif;
+            background: #040811;
+            margin: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
 
-        /* =========================
-           SECTION
-        ========================== */
+        /* ===== FULL PAGE BACKGROUND ===== */
+        .full-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("hero3.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
 
+        .full-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(4, 8, 17, 0.6);
+            z-index: 1;
+        }
+
+        /* ===== CONTENT WRAPPER ===== */
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== NAVIGATION - PERFECTLY CENTERED ===== */
+        .cfimh-nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            max-width: 900px;
+            width: calc(100% - 2rem);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 0;
+            right: 0;
+            top: 24px;
+            position: fixed;
+            z-index: 50;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            height: 72px;
+            border-radius: 9999px;
+        }
+
+        @media (max-width: 768px) {
+            .cfimh-nav {
+                width: calc(100% - 1.5rem);
+                height: 60px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                top: 16px;
+                border-radius: 9999px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cfimh-nav {
+                width: calc(100% - 1rem);
+                height: 56px;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                top: 12px;
+            }
+        }
+
+        .cfimh-nav.scrolled {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            border-color: rgba(200, 200, 220, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .cfimh-nav.scrolled .nav-link,
+        .cfimh-nav.scrolled .mobile-menu-button,
+        .cfimh-nav.scrolled .mobile-menu-close,
+        .cfimh-nav.scrolled .mobile-nav-item,
+        .cfimh-nav.scrolled .mobile-accordion-trigger {
+            color: #1e1e3f;
+        }
+
+        .cfimh-nav.scrolled .nav-link:hover {
+            color: #4f46e5;
+        }
+
+        .cfimh-nav:not(.scrolled) .nav-link {
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .cfimh-nav:not(.scrolled) .nav-link:hover {
+            color: #b7e0ff;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            transition: color 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile menu */
+        .mobile-menu-overlay {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-menu-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            transform: translateX(100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(10, 10, 30, 0.55);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .mobile-menu.show {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-button.active .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-button.active .line2 {
+            opacity: 0;
+        }
+
+        .mobile-menu-button.active .line3 {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        .hamburger-lines .line {
+            background: currentColor;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== PUBLICATIONS SECTION - WITH TOP PADDING ===== */
         .publications-section {
             position: relative;
+            padding: 140px 24px 80px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            padding: 30px 20px 90px;
-            overflow: hidden;
         }
 
         .publications-container {
             width: 100%;
             max-width: 1100px;
             margin: 0 auto;
+            padding: 0 16px;
             position: relative;
             z-index: 2;
         }
 
-
-        /* =========================
-           BACK BUTTON
-        ========================== */
-
-        .back-wrapper {
-            margin-bottom: 45px;
-        }
-
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-
-            padding: 10px 17px;
-
-            border: 1px solid #e4e2ef;
-            border-radius: 10px;
-
-            background: #ffffff;
-            color: #2c2c54;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            text-decoration: none;
-
-            box-shadow: 0 5px 18px rgba(40, 40, 80, 0.06);
-
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: #6555c7;
-            border-color: #d8d2fa;
-            transform: translateX(-3px);
-            box-shadow: 0 8px 22px rgba(40, 40, 80, 0.09);
-        }
-
-        .back-arrow {
-            font-size: 18px;
-            line-height: 1;
-
-            transition: transform 0.3s ease;
-        }
-
-        .back-button:hover .back-arrow {
-            transform: translateX(-3px);
-        }
-
-
-        /* =========================
-           HEADER
-        ========================== */
-
         .publications-header {
             text-align: center;
             max-width: 720px;
-            margin: 0 auto 55px;
+            margin: 0 auto 50px;
         }
 
         .publications-label {
             display: inline-block;
             padding: 7px 17px;
             margin-bottom: 16px;
-
             border-radius: 30px;
-
-            background: #f0edff;
+            background: rgba(240, 237, 255, 0.9);
             color: #6555c7;
-
             font-size: 12px;
             font-weight: 700;
-
             letter-spacing: 1px;
             text-transform: uppercase;
         }
@@ -121,85 +222,59 @@
             font-size: 44px;
             line-height: 1.2;
             font-weight: 800;
-
-            color: #29294d;
-
+            color: #ffffff;
             margin-bottom: 16px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         .publications-header p {
-            color: #707070;
+            color: rgba(255, 255, 255, 0.85);
             font-size: 16px;
             line-height: 1.75;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
         }
-
-
-        /* =========================
-           GRID
-        ========================== */
 
         .publications-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-
-
-        /* =========================
-           CARD
-        ========================== */
 
         .publication-card {
             overflow: hidden;
-
-            background: #ffffff;
-
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 24px;
             padding: 9px;
-
-            border: 1px solid rgba(0, 0, 0, 0.03);
-
-            box-shadow:
-                0 10px 35px rgba(38, 38, 75, 0.08);
-
-            transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .publication-card:hover {
             transform: translateY(-7px);
-
-            box-shadow:
-                0 20px 50px rgba(38, 38, 75, 0.14);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
         }
-
-
-        /* =========================
-           IMAGE
-        ========================== */
 
         .publication-image {
             position: relative;
-
             width: 100%;
             height: 285px;
-
             overflow: hidden;
-
             border-radius: 18px;
-
             background: #e8e9ef;
         }
 
         .publication-image img {
             width: 100%;
             height: 100%;
-
             display: block;
-
             object-fit: cover;
-
             transition: transform 0.6s ease;
         }
 
@@ -209,97 +284,69 @@
 
         .publication-image::after {
             content: "";
-
             position: absolute;
             inset: 0;
-
-            background:
-                linear-gradient(to bottom,
-                    rgba(20, 20, 50, 0.02),
-                    rgba(20, 20, 50, 0.20));
-
+            background: linear-gradient(to bottom, rgba(20, 20, 50, 0.02), rgba(20, 20, 50, 0.20));
             pointer-events: none;
         }
 
-
-        /* =========================
-           CONTENT
-        ========================== */
-
         .publication-content {
             padding: 24px 20px 22px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .publication-category {
             display: inline-flex;
             align-items: center;
             gap: 7px;
-
             margin-bottom: 12px;
-
             color: #6555c7;
-
             font-size: 12px;
             font-weight: 700;
-
             letter-spacing: 0.8px;
             text-transform: uppercase;
         }
 
         .publication-category::before {
             content: "";
-
             width: 7px;
             height: 7px;
-
             border-radius: 50%;
-
             background: #6555c7;
         }
 
         .publication-title {
             color: #29294d;
-
             font-size: 23px;
             line-height: 1.4;
             font-weight: 700;
-
             margin-bottom: 12px;
         }
 
         .publication-description {
             color: #666;
-
             font-size: 15px;
             line-height: 1.7;
-
             margin-bottom: 20px;
+            flex: 1;
         }
-
-
-        /* =========================
-           BUTTON
-        ========================== */
 
         .publication-link {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 9px;
-
             padding: 11px 18px;
-
             border-radius: 10px;
-
             background: #6555c7;
             color: #ffffff;
-
             font-size: 14px;
             font-weight: 700;
-
             text-decoration: none;
-
             transition: all 0.3s ease;
+            align-self: flex-start;
         }
 
         .publication-link:hover {
@@ -316,50 +363,8 @@
             transform: translateX(4px);
         }
 
-
-        /* =========================
-           DECORATIVE BACKGROUND
-        ========================== */
-
-        .publication-decoration-one {
-            position: absolute;
-
-            width: 380px;
-            height: 380px;
-
-            top: -180px;
-            right: -150px;
-
-            border-radius: 50%;
-
-            background: rgba(232, 227, 255, 0.55);
-
-            filter: blur(50px);
-        }
-
-        .publication-decoration-two {
-            position: absolute;
-
-            width: 350px;
-            height: 350px;
-
-            bottom: -180px;
-            left: -160px;
-
-            border-radius: 50%;
-
-            background: rgba(225, 239, 255, 0.55);
-
-            filter: blur(50px);
-        }
-
-
-        /* =========================
-           TABLET
-        ========================== */
-
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 850px) {
-
             .publications-header h1 {
                 font-size: 38px;
             }
@@ -375,21 +380,15 @@
             .publication-title {
                 font-size: 21px;
             }
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media (max-width: 650px) {
 
             .publications-section {
-                padding: 22px 16px 60px;
+                padding: 120px 16px 60px;
             }
+        }
 
-            .back-wrapper {
-                margin-bottom: 35px;
+        @media (max-width: 650px) {
+            .publications-section {
+                padding: 100px 16px 60px;
             }
 
             .publications-header {
@@ -407,6 +406,7 @@
             .publications-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                max-width: 540px;
             }
 
             .publication-image {
@@ -424,15 +424,17 @@
             .publication-description {
                 font-size: 14px;
             }
+
+            .cfimh-nav {
+                height: 56px;
+            }
+
+            .nav-link {
+                font-size: 0.8rem;
+            }
         }
 
-
-        /* =========================
-           SMALL MOBILE
-        ========================== */
-
         @media (max-width: 400px) {
-
             .publications-header h1 {
                 font-size: 28px;
             }
@@ -448,146 +450,283 @@
     </style>
 </head>
 
-
 <body>
 
-    <section class="publications-section">
+    <!-- ===== FULL BACKGROUND ===== -->
+    <div class="full-bg"></div>
 
-        <!-- Decorative Background -->
-        <div class="publication-decoration-one"></div>
-        <div class="publication-decoration-two"></div>
+    <!-- ===== CONTENT WRAPPER ===== -->
+    <div class="content-wrapper">
 
+        <!-- ===== NAVIGATION - PERFECTLY CENTERED ===== -->
+        <nav id="main-nav" class="cfimh-nav">
 
-        <div class="publications-container">
+            <!-- Left: Logo + Mobile Menu -->
+            <div class="flex items-center gap-2">
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button"
+                        class="mobile-menu-button p-2 rounded-xl text-white hover:bg-white/20 transition-colors duration-200">
+                        <div class="hamburger-lines">
+                            <span
+                                class="line line1 block w-6 h-0.5 bg-current mb-1.5 transition-all duration-300"></span>
+                            <span
+                                class="line line2 block w-6 h-0.5 bg-current mb-1.5 transition-all duration-300"></span>
+                            <span class="line line3 block w-6 h-0.5 bg-current transition-all duration-300"></span>
+                        </div>
+                    </button>
+                </div>
 
-            <!-- =========================
-             BACK TO HOME
-        ========================== -->
+                <div class="flex items-center">
+                    <div
+                        class="text-white/90 px-2 py-1 rounded-full font-bold text-xl md:text-2xl flex items-center gap-1.5">
+                        <i class="fas fa-stethoscope"></i>
+                        <span class="tracking-tight">CF</span>
+                    </div>
+                </div>
+            </div>
 
-            <div class="back-wrapper">
-
-                <a href="index.html" class="back-button">
-                    <span class="back-arrow">←</span>
-                    <span>Back to Home</span>
+            <!-- Desktop Navigation (Only HOME + JOURNALS) -->
+            <div class="hidden lg:flex items-center space-x-8 xl:space-x-10 text-sm font-medium">
+                <a href="index.html" class="nav-link transition-colors duration-200">HOME</a>
+                <a href="publish.html" class="transition-colors duration-200 font-semibold text-green-300 pb-1">
+                    JOURNALS &amp; PUBLICATIONS
                 </a>
-
             </div>
 
-
-            <!-- =========================
-             HEADER
-        ========================== -->
-
-            <div class="publications-header">
-
-                <span class="publications-label">
-                    Medical & Healthcare Research
-                </span>
-
-                <h1>
-                    Journals & Publications
-                </h1>
-
-                <p>
-                    Explore our academic journals dedicated to advancing
-                    research, knowledge, and professional practice across
-                    healthcare, nursing, medical terminology, and health
-                    informatics.
-                </p>
-
+            <!-- Right CTA -->
+            <div class="hidden md:flex items-center">
+                <button
+                    class="bg-indigo-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-200/40">
+                    Submit Research
+                </button>
             </div>
+        </nav>
 
-
-            <!-- =========================
-             JOURNAL CARDS
-        ========================== -->
-
-            <div class="publications-grid">
-
-
-                <!-- JOURNAL 1 -->
-
-                <article class="publication-card">
-
-                    <div class="publication-image">
-
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85"
-                            alt="International Journal of Evolving Health and Nursing Care">
-
-                    </div>
-
-
-                    <div class="publication-content">
-
-                        <div class="publication-category">
-                            Health & Nursing Care
-                        </div>
-
-                        <h2 class="publication-title">
-                            International Journal of Evolving Health and Nursing Care
-                        </h2>
-
-                        <p class="publication-description">
-                            A scholarly platform focused on evolving healthcare
-                            practices, nursing care, clinical knowledge, and
-                            emerging developments in health sciences.
-                        </p>
-
-                        <a href="https://globalnursingjournal.com/index.php/ijehnc/about" target="_blank"
-                            rel="noopener noreferrer" class="publication-link">
-                            Visit Journal
-                            <span>→</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- JOURNAL 2 -->
-
-                <article class="publication-card">
-
-                    <div class="publication-image">
-
-                        <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=1200&q=85"
-                            alt="Global Journal of Medical Terminology Research and Informatics">
-
-                    </div>
-
-
-                    <div class="publication-content">
-
-                        <div class="publication-category">
-                            Medical Science & Informatics
-                        </div>
-
-                        <h2 class="publication-title">
-                            Global Journal of Medical Terminology Research and Informatics
-                        </h2>
-
-                        <p class="publication-description">
-                            A scholarly journal focused on medical terminology,
-                            healthcare research, clinical communication, and
-                            informatics within the medical sciences.
-                        </p>
-
-                        <a href="https://terminologyresearch.com/" target="_blank" rel="noopener noreferrer"
-                            class="publication-link">
-                            Visit Journal
-                            <span>→</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
+        <!-- ===== MOBILE MENU OVERLAY ===== -->
+        <div id="mobile-menu-overlay"
+            class="mobile-menu-overlay fixed inset-0 bg-black/30 backdrop-blur-sm z-40 lg:hidden opacity-0 invisible transition-all duration-300">
         </div>
 
-    </section>
+        <!-- ===== MOBILE MENU ===== -->
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-sm bg-white/10 backdrop-blur-2xl shadow-2xl z-50 lg:hidden transform translate-x-full transition-transform duration-300 overflow-y-auto border-l border-white/10">
+            <div class="p-6 border-b border-white/10 flex items-center justify-between">
+                <div class="text-white text-2xl font-bold flex items-center gap-2"><i class="fas fa-stethoscope"></i> CF
+                </div>
+                <button id="mobile-menu-close" class="p-2 rounded-xl text-white hover:bg-white/20 transition-colors"><i
+                        class="fas fa-times text-xl"></i></button>
+            </div>
+            <div class="p-4">
+                <button
+                    class="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition-colors mb-4 shadow-lg shadow-indigo-500/20">Submit
+                    Research</button>
+                <div class="space-y-1">
+                    <a href="index.html"
+                        class="mobile-nav-item flex items-center gap-3 py-3 px-4 text-white/90 hover:bg-white/15 rounded-xl transition-colors font-medium">
+                        <i class="fas fa-home text-indigo-300 w-5"></i>Home
+                    </a>
+                    <a href="publish.html"
+                        class="mobile-nav-item flex items-center gap-3 py-3 px-4 text-indigo-200/90 hover:bg-white/15 rounded-xl transition-colors font-medium border-l-2 border-indigo-300/40 pl-3">
+                        <i class="fas fa-book text-indigo-300 w-5"></i>Journals &amp; Publications
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PUBLICATIONS SECTION ===== -->
+        <section class="publications-section">
+
+            <div class="publications-container">
+
+                <!-- Header -->
+                <div class="publications-header">
+                    <h1>
+                        Journals &amp; Publications
+                    </h1>
+                    <p>
+                        Explore our academic journals dedicated to advancing
+                        research, knowledge, and professional practice across
+                        healthcare, nursing, medical terminology, and health
+                        informatics.
+                    </p>
+                </div>
+
+                <!-- Journal Cards Grid -->
+                <div class="publications-grid">
+
+                    <!-- JOURNAL 1 -->
+                    <article class="publication-card">
+                        <div class="publication-image">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85"
+                                alt="International Journal of Evolving Health and Nursing Care" loading="lazy">
+                        </div>
+                        <div class="publication-content">
+                            <div class="publication-category">
+                                Health &amp; Nursing Care
+                            </div>
+                            <h2 class="publication-title">
+                                International Journal of Evolving Health and Nursing Care
+                            </h2>
+                            <p class="publication-description">
+                                A scholarly platform focused on evolving healthcare
+                                practices, nursing care, clinical knowledge, and
+                                emerging developments in health sciences.
+                            </p>
+                            <a href="https://globalnursingjournal.com/index.php/ijehnc/about" target="_blank"
+                                rel="noopener noreferrer" class="publication-link">
+                                Visit Journal
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- JOURNAL 2 -->
+                    <article class="publication-card">
+                        <div class="publication-image">
+                            <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=1200&q=85"
+                                alt="Global Journal of Medical Terminology Research and Informatics" loading="lazy">
+                        </div>
+                        <div class="publication-content">
+                            <div class="publication-category">
+                                Medical Science &amp; Informatics
+                            </div>
+                            <h2 class="publication-title">
+                                Global Journal of Medical Terminology Research and Informatics
+                            </h2>
+                            <p class="publication-description">
+                                A scholarly journal focused on medical terminology,
+                                healthcare research, clinical communication, and
+                                informatics within the medical sciences.
+                            </p>
+                            <a href="https://terminologyresearch.com/" target="_blank" rel="noopener noreferrer"
+                                class="publication-link">
+                                Visit Journal
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer id="footer"
+            class="mx-2 my-4 rounded-2xl bg-black/50 backdrop-blur-md h-auto py-12 relative overflow-hidden border border-white/10">
+            <div class="container mx-auto px-4 relative z-10 border border-white/20 bg-black/30 px-8 py-6 rounded-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-12 sm:gap-8 mb-8 pt-4 sm:pt-20">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-white">Quick Links</h4>
+                        <ul class="space-y-2 text-gray-100 font-[300]">
+                            <li><a href="#about" class="hover:text-[#6BF771]">About CFIMH</a></li>
+                            <li><a href="#research" class="hover:text-[#6BF771]">Research Hub</a></li>
+                            <li><a href="#cme" class="hover:text-[#6BF771]">Professional Development</a></li>
+                            <li><a href="#guidelines" class="hover:text-[#6BF771]">Clinical Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-white">Professional Resources</h4>
+                        <ul class="space-y-2 text-gray-100 font-[300]">
+                            <li><a href="#forums" class="hover:text-white">Forums & Discussion</a></li>
+                            <li><a href="#membership" class="hover:text-[#6BF771]">Membership</a></li>
+                            <li><a href="#resources" class="hover:text-[#6BF771]">Ethics Consultation</a></li>
+                            <li><a href="#directory" class="hover:text-[#6BF771]">Professional Directory</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-white">Services</h4>
+                        <ul class="space-y-2 text-gray-100 font-[300]">
+                            <li><a href="#publications" class="hover:text-[#6BF771]">Publications</a></li>
+                            <li><a href="#events" class="hover:text-[#6BF771]">Events & Conferences</a></li>
+                            <li><a href="#emergency" class="hover:text-[#6BF771]">Emergency Guidelines</a></li>
+                            <li><a href="#tools" class="hover:text-[#6BF771]">Professional Tools</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-white">Certifications</h4>
+                        <p class="text-gray-100 text-sm font-[300]">ACCME Accredited<br />AMA Recognized<br />AAMC
+                            Affiliated<br />ISO 9001:2015 Certified<br />Joint Commission Approved</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-white">Contact Information</h4>
+                        <p class="text-gray-100 text-sm font-[300]">
+                            1800 Medical Center Drive<br />
+                            Suite 500, Boston, MA 02115<br />
+                            Email: professionals@cfimh.org<br />
+                            Ethics Hotline: +1 (555) 911-ETHICS
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center text-white font-[300] mt-20">
+                    <p>&copy; 2025 Clinical Forum for Intellectuals in Medical & Health. All rights reserved. |
+                        Established 1978 | Serving 65 Countries Worldwide</p>
+                </div>
+
+                <div class="flex space-x-4 justify-center mt-10">
+                    <a href="#" target="_blank"
+                        class="bendo-button bg-blue-600 text-white hover:bg-blue-700 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank"
+                        class="bendo-button bg-blue-400 text-white hover:bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank"
+                        class="bendo-button bg-red-600 text-white hover:bg-red-700 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" target="_blank"
+                        class="bendo-button bg-gray-800 text-white hover:bg-gray-900 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // ---- Nav scroll effect ----
+            const nav = document.getElementById('main-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // ---- Mobile menu toggle ----
+            const menuBtn = document.getElementById('mobile-menu-button');
+            const closeBtn = document.getElementById('mobile-menu-close');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function openMenu() {
+                mobileMenu.classList.add('show');
+                overlay.classList.add('show');
+                menuBtn.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.remove('show');
+                overlay.classList.remove('show');
+                menuBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            menuBtn.addEventListener('click', openMenu);
+            closeBtn.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+
+        });
+    </script>
 
 </body>
 
